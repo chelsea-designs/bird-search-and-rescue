@@ -19,6 +19,10 @@ body {
     width: 1.5rem;
 }
 
+.nav-logo {
+    max-height: 160px;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
@@ -38,6 +42,11 @@ body {
     color: white;
 }
 
+.btn-white {
+    background: white;
+    color: black;
+}
+
 .donate-now-button:hover,
 .donate-now-button:active,
 .donate-now-button:focus,
@@ -48,12 +57,23 @@ body {
     color: white;
 }
 
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+    background: rgb(193, 193, 193);
+    color: black;
+}
+
 .text-black {
     color: #000 !important;
 }
 
-.border-black {
+.border-white {
     border: 1px solid black !important;
+}
+
+.bg-white {
+    background: #FFF !important;
 }
 
 .bg-black {
