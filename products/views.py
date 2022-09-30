@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
+from django.db.models.functions import Lower
 
 # Create your views here.
 
@@ -10,6 +11,7 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    # Bug fix: category badges not showing, changed below line from categories = none to categories = Category.objects.all() seems to fix it
     categories = Category.objects.all()
     sort = None
     direction = None
@@ -20,7 +22,7 @@ def all_products(request):
                 sortkey = request.GET['sort']
                 sort = sortkey
                 if sortkey == 'name':
-                    sortkey = 'lower name'
+                    sortkey = 'lower_name'
                     products = products.annotate(lower_name=Lower('name'))
                 if sortkey == 'category':
                     sortkey = 'category__name'
