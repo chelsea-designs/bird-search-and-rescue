@@ -113,6 +113,11 @@ c{% load static %}
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-white text-black">
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+            </div>
+        </div>
     </header>
 
     {% if messages %}
