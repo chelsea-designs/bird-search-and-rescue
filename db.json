@@ -1,0 +1,106 @@
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "clothing",
+        "friendly_name": "Clothing"
+    }
+}, {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "accessories",
+        "friendly_name": "Accessories"
+    }
+}, {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "homeandliving",
+        "friendly_name": "Home & Living"
+    }
+}, {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "Clearance",
+        "friendly_name": "Clearance"
+    }
+}, {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+    }
+}, {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "sku": "pp5001340155",
+        "name": "Beanie Hat",
+        "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+        "has_sizes": true,
+        "price": "3.99",
+        "rating": "4.71",
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "hat.png"
+    }
+}, {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 2,
+        "sku": "pp5001600425",
+        "name": "Backpack",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "has_sizes": false,
+        "price": "15.99",
+        "rating": "4.60",
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "bag.png"
+    }
+}, {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 3,
+        "sku": "pp5001600425",
+        "name": "iPhone Case",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "has_sizes": false,
+        "price": "4.99",
+        "rating": "5.00",
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "phone_case.png"
+    }
+}, {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 3,
+        "sku": "pp5001600425",
+        "name": "Water Bottle",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "has_sizes": false,
+        "price": "5.99",
+        "rating": "4.00",
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "water_bottle.png"
+    }
+}, {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "category": 1,
+        "sku": "pp5001600425",
+        "name": "T Shirt",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "has_sizes": true,
+        "price": "8.99",
+        "rating": "4.90",
+        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+        "image": "t_shirt.png"
+    }
+}]
