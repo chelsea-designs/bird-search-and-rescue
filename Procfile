@@ -1,1 +1,1 @@
-web: gunicorn bird-sandr.wsgi:application
+web: gunicorn bird_sandr.wsgi:application
