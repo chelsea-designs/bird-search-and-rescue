@@ -44,15 +44,15 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'storages',
+    'django_summernote',
     'home',
     'products',
     'bag',
     'checkout',
     'profiles',
-
-    # Other
-    'crispy_forms',
-    'storages',
+    'blog',
 ]
 
 MIDDLEWARE = [

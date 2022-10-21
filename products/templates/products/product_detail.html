@@ -38,7 +38,10 @@
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                        data-target="#delete-product-detail-modal">
+                        Delete
+                    </button>
                 </small>
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
@@ -101,6 +104,29 @@
         </div>
     </div>
 </div>
+{% if user.is_authenticated %}
+<!-- Modal -->
+<div class="modal fade" id="delete-product-detail-modal" tabindex="-1" aria-labelledby="delete-product-modal-heading"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="delete-product-modal-heading">Delete Product</h5>
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the product titled:</p>
+                <p>"<strong>{{ product.name }}</strong>"</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block postloadjs %}

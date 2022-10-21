@@ -294,6 +294,31 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* blog posts */
+.blog-post-container>a:hover {
+    color: black;
+}
+
+.blog-card-image {
+    max-width: min(100%, 485px);
+}
+
+.blog-nav>ul {
+    gap: 1rem;
+}
+
+.blog-nav li {
+    list-style: none;
+}
+
+.blog-card-post-container {
+    gap: 1rem;
+}
+
+.category-container>p {
+    max-width: 150px;
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -306,14 +331,14 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 300px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 300px;
     }
 
     body {

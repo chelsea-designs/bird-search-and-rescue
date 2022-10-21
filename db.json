@@ -20,20 +20,6 @@
         "friendly_name": "Home & Living"
     }
 }, {
-    "model": "products.category",
-    "pk": 4,
-    "fields": {
-        "name": "Clearance",
-        "friendly_name": "Clearance"
-    }
-}, {
-    "model": "products.category",
-    "pk": 5,
-    "fields": {
-        "name": "new_arrivals",
-        "friendly_name": "New Arrivals"
-    }
-}, {
     "model": "products.product",
     "pk": 1,
     "fields": {
