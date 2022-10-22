@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    {% if user.is_authenticated %}
+    <nav class="team-nav">
+        <ul class="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-3">
+            <li>
+                <a href="{% url 'add_team_member' %}" class="btn btn-primary">Add Team Member</a>
+            </li>
+        </ul>
+    </nav>
+    {% endif %}
+    <section class="container-fluid">
+        <h3 class="mb-4">Our Team</h3>
+        <div class="row">
+            <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mx-auto">
+                <div class="team-member-container">
+                    {% if members %}
+                    {% for member in members %}
+                    <div class="team-card-member-container d-flex mt-4 flex-column flex-sm-row bg-one gap">
+                        {% if member.image %}
+                        <img src="{{ member.image.url }}" alt="{{ member.name }}" class="team-card-image">
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="team-card-image">
+                        {% endif %}
+                        <div class="team-card-biography-container">
+                            <h5>{{ member.name }}</h5>
+                            <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
+                            <p>{{ member.biography|slice:350|safe }}</p>
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_team_member' member.slug %}" class="btn btn-primary">Edit Team
+                                    Member</a>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                    data-target="#delete-team-member-{{member.slug}}-modal">
+                                    Delete
+                                </button>
+                            </small>
+                            <!-- Modal -->
+                            <div class="modal fade" id="delete-team-member-{{member.slug}}-modal" tabindex="-1"
+                                aria-labelledby="delete-member-modal-heading" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="delete-member-modal-heading">Delete Team Member
+                                            </h5>
+                                            <button type="button" class="btn btn-close" data-dismiss="modal"
+                                                aria-label="Close"><i class="fa fa-close"></i></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to delete the team member called:</p>
+                                            <p>"<strong>{{ member.name }}</strong>"</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                            <a class="btn btn-danger"
+                                                href="{% url 'delete_team_member' member.id %}">Delete Team
+                                                Member</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <p>There are no team members for you to view right now.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

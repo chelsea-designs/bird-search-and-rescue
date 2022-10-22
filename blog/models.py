@@ -3,26 +3,10 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 
 # Create your models here.
-class BlogCategory(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Blog Categories'
-
-    name = models.CharField(max_length=50, unique=True)
-
-    def __str__(self):
-        return self.name
-
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
     slug = models.SlugField(max_length=128, null=False, blank=False, unique=True)
-    category = models.ForeignKey(
-                                 BlogCategory,
-                                 null=False,
-                                 blank=False,
-                                 on_delete=models.SET_DEFAULT,
-                                 default=1)
     author = models.ForeignKey(
                                User,
                                null=False,

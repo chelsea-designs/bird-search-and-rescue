@@ -315,8 +315,26 @@ input[name='q']::placeholder {
     gap: 1rem;
 }
 
-.category-container>p {
-    max-width: 150px;
+
+/* Team Members */
+.team-member-container>a:hover {
+    color: black;
+}
+
+.team-card-image {
+    max-width: min(100%, 485px);
+}
+
+.team-nav>ul {
+    gap: 1rem;
+}
+
+.team-nav li {
+    list-style: none;
+}
+
+.team-card-member-container {
+    gap: 1rem;
 }
 
 

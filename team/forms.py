@@ -1,23 +1,23 @@
 from django import forms
-from .models import BlogPost
+from .models import TeamMember
 from django_summernote.widgets import SummernoteWidget
 from .widgets import CustomClearableFileInput
 
 
-class BlogPostForm(forms.ModelForm):
+class TeamMemberForm(forms.ModelForm):
     '''
-    form to add blog posts
+    form to add team member
     '''
     class Meta:
-        model = BlogPost
+        model = TeamMember
         fields = (
-            'title',
+            'name',
             'image_url',
             'image',
-            'content',
+            'biography',
         )
         widgets = {
-            'content': SummernoteWidget(),
+            'biography': SummernoteWidget(),
         }
 
     image = forms.ImageField(

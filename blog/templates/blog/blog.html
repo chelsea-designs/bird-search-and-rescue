@@ -18,18 +18,11 @@
             <li>
                 <a href="{% url 'add_blog_post' %}" class="btn btn-primary">Add Post</a>
             </li>
-            <li>
-                <button class="btn btn-secondary" data-hx-get="{% url 'get_categories' %}" data-hx-swap="innerHTML"
-                    data-hx-target="#categories-container" data-hx-trigger="click">Category Management</button>
-            </li>
         </ul>
     </nav>
-    <div id="categories-container">
-
-    </div>
     {% endif %}
     <section class="container-fluid">
-        <h3 class="mb-4">Latest News and Events</h3>
+        <h3 class="mb-4">Latest News</h3>
         <div class="row">
             <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mx-auto">
                 <div class="blog-post-container">
@@ -71,7 +64,8 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                                <a class="btn" href="{% url 'delete_blog_post' post.id %}">Delete Blog
+                                                <a class="btn btn-danger"
+                                                    href="{% url 'delete_blog_post' post.id %}">Delete Blog
                                                     Post</a>
                                             </div>
                                         </div>
