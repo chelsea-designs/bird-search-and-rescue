@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 225px);
     color: #555;
     font-family: 'Lato';
 }
@@ -295,46 +295,16 @@ input[name='q']::placeholder {
 }
 
 /* blog posts */
-.blog-post-container>a:hover {
-    color: black;
-}
 
 .blog-card-image {
     max-width: min(100%, 485px);
 }
 
-.blog-nav>ul {
-    gap: 1rem;
-}
-
-.blog-nav li {
-    list-style: none;
-}
-
-.blog-card-post-container {
-    gap: 1rem;
-}
-
 
 /* Team Members */
+
 .team-member-container>a:hover {
     color: black;
-}
-
-.team-card-image {
-    max-width: min(100%, 485px);
-}
-
-.team-nav>ul {
-    gap: 1rem;
-}
-
-.team-nav li {
-    list-style: none;
-}
-
-.team-card-member-container {
-    gap: 1rem;
 }
 
 
@@ -349,18 +319,18 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 300px;
+        padding-top: 225px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 300px;
+        padding-top: 225px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 225px);
     }
 
     .display-4.logo-font.text-black {
@@ -378,10 +348,6 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
     }
 
     .btn.btn-outline-black.rounded-0,
