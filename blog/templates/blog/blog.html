@@ -36,7 +36,7 @@
             </div>
             <div class="blog-card-content-container col-9 d-flex align-items-center">
                 <a class="text-black text-decoration-none" href="{% url 'blog_post_detail' post.slug %}">
-                    <h3 class="col-12 px-0">{{ post.title }}</h3>
+                    <h2 class="col-12 px-0">{{ post.title }}</h2>
                     <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
                     <p class="col-12">{{ post.content|striptags|truncatechars:140|safe }}</p>
                 </a>
