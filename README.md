@@ -1,7 +1,6 @@
 # British and International Search and Rescue Dogs (B.I.R.D)
 
 Todo: 
-- Custom error pages
 - Wireframes
 - Datascheme
 - Readme
@@ -11,7 +10,7 @@ Todo:
 - Check id, class
 - Unused css
 - Rename files
-- Debug mode
+- Debug mode false
 - Peer review
 
 ## Introduction
