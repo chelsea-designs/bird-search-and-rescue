@@ -20,7 +20,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu border-1" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-1" aria-label="all-products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
@@ -28,7 +28,7 @@
                     aria-expanded="false">
                     By Category
                 </a>
-                <div class="dropdown-menu border-1" aria-labelledby="categories-link">
+                <div class="dropdown-menu border-1" aria-label="categories-link">
                     <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Clothing</a>
                     <a href="{% url 'products' %}?category=accessories" class="dropdown-item ">Accessories</a>
                     <a href="{% url 'products' %}?category=homeandliving" class="dropdown-item ">Home & Living</a>

@@ -13,9 +13,9 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     {% if post %}
-    <h2>Edit Blog Post</h2>
+    <h1>Edit Blog Post</h1>
     {% else %}
-    <h2>Add Blog Post</h2>
+    <h1>Add Blog Post</h1>
     {% endif %}
     <form action="{% if post %}{% url 'edit_blog_post' post.slug %}{% else %}{% url 'add_blog_post' %}{% endif %}"
         method="post" enctype="multipart/form-data" class="mt-2">
@@ -39,7 +39,7 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     let selector = document.getElementById('new-image');
     selector.addEventListener('change', (event) => {
         let file = selector.files[0];

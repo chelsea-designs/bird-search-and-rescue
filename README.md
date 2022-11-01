@@ -59,39 +59,38 @@ Please note: To open any links in this document in a new browser tab, please pre
 | --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 |     |            | **_Viewing and Navigation_**                                      |                                                                                       |
 | 1   | Customer    | View list of products                                             | Find something to purchase                                                            |
-| 2   | Customer    | View details of product                                           | See Price, Description, Image, and Sizes i/a                                          |
-| 3   | Customer    | See list of deals, clearance items, etc                           | Take advantage of deals and save money                                                |
-| 4   | Customer    | See my cart's total at any time                                   | Avoid spending too much                                                               |
+| 2   | Customer    | View details of product                                           | See Price, Description, Image, and Sizes i/a                                          |                                                |
+| 3   | Customer    | See my cart's total at any time                                   | Avoid spending too much                                                               |
 |     |            | **_Registration and User Accounts_**                              |                                                                                       |
-| 5   | Reg User   | Register for an account                                           | Save my delivery details and order history                                            |
-| 6   | Reg User   | Quickly login/out                                                 | Access my account                                                                     |
-| 7   | Reg User   | Request a password reset                                          | receive and email to reset my password in case I forget it                            |
-| 8   | Reg User   | Receive an email confirming my registration                       | Verify my account was registered successfully                                         |
-| 9   | Reg User   | Access my user profile                                            | View my order history, manage my personal details                                     |
+| 4   | Reg User   | Register for an account                                           | Save my delivery details and order history                                            |
+| 5   | Reg User   | Quickly login/out                                                 | Access my account                                                                     |
+| 6   | Reg User   | Request a password reset                                          | receive and email to reset my password in case I forget it                            |
+| 7   | Reg User   | Receive an email confirming my registration                       | Verify my account was registered successfully                                         |
+| 8   | Reg User   | Access my user profile                                            | View my order history, manage my personal details                                     |
 |     |            | **_Sorting and Searching_**                                       |                                                                                       |
-| 10  | Customer    | Sort the list of available products                               | See the products in a list sorted by price, rating, quantity available etc            |
-| 11  | Customer    | Sort a category of products                                       | See the products in a category sorted by name, price, rating, etc                     |
-| 12  | Customer    | Sort multiple categories simultaneously                           | Find the best rated or best priced across broad categories such as 'books' or 'honey' |
-| 13  | Customer    | Search for product                                                | Find a specific item I wish to purchase                                               |
-| 14  | Customer    | View a list of search results                                     | See if the product I want is available to purchase                                    |
+| 9  | Customer    | Sort the list of available products                               | See the products in a list sorted by price, rating, quantity available etc            |
+| 10  | Customer    | Sort a category of products                                       | See the products in a category sorted by name, price, rating, etc                     |
+| 11  | Customer    | Sort multiple categories simultaneously                           | Find the best rated or best priced across broad categories such as 'books' or 'honey' |
+| 12  | Customer    | Search for product                                                | Find a specific item I wish to purchase                                               |
+| 13  | Customer    | View a list of search results                                     | See if the product I want is available to purchase                                    |
 |     |            | **_Purchasing and Checkout_**                                     |                                                                                       |
-| 15  | Customer    | Easily select the size and quantity whilst purchasing an item     | Ensure I don't accidentally select the wrong product, quantity, or size               |
-| 16  | Customer    | View items in my basket                                           | See what items are in my basket at a glance to ensure the items are correct           |
-| 17  | Customer    | Adjust the quantity of individual items in my bag                 | Easily adjust the amount of an item I intended to purchase (including removing)       |
-| 18  | Customer    | Easily enter my payment information                               | Checkout quickly, without hassle                                                      |
-| 19  | Customer    | Feel my payment and personal information is secure                | Provide the needed payment and personal information, and feel it is handled safely    |
-| 20  | Customer    | View confirmation of order before completing purchase             | Verify I haven't made any mistakes                                                    |
-| 21  | Customer    | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 |
+| 14  | Customer    | Easily select the size and quantity whilst purchasing an item     | Ensure I don't accidentally select the wrong product, quantity, or size               |
+| 15  | Customer    | View items in my basket                                           | See what items are in my basket at a glance to ensure the items are correct           |
+| 16  | Customer    | Adjust the quantity of individual items in my bag                 | Easily adjust the amount of an item I intended to purchase (including removing)       |
+| 17  | Customer    | Easily enter my payment information                               | Checkout quickly, without hassle                                                      |
+| 18  | Customer    | Feel my payment and personal information is secure                | Provide the needed payment and personal information, and feel it is handled safely    |
+| 19  | Customer    | View confirmation of order before completing purchase             | Verify I haven't made any mistakes                                                    |
+| 20  | Customer    | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 |
 |     |            | **_Admin and Store Management_**                                  |                                                                                       |
-| 22  | Site Owner | Add a product                                                     | Add new products to my store                                                          |
-| 23  | Site Owner | Edit/update a product                                             | Change the price, description, images etc of a product                                |
-| 24  | Site Owner | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
-| 25  | Site Owner | Add a team member                                                 | Add new products to my store                                                          |
-| 26  | Site Owner | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
-| 27  | Site Owner | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
+| 21  | Site Owner | Add a product                                                     | Add new products to my store                                                          |
+| 22  | Site Owner | Edit/update a product                                             | Change the price, description, images etc of a product                                |
+| 23  | Site Owner | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
+| 24  | Site Owner | Add a team member                                                 | Add new products to my store                                                          |
+| 25  | Site Owner | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
+| 26  | Site Owner | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
 |     |            | **_News Section_**                                                |                                                                                       |
-| 28  | Customer    | View list of news articles                                        | Choose a news article to read                                                         |
-| 29  | Customer    | View full news article                                            | Read detailed about latest news and activities                                        |
+| 27  | Customer    | View list of news articles                                        | Choose a news article to read                                                         |
+| 28  | Customer    | View full news article                                            | Read detailed about latest news and activities                                        |
 
 ## Design
 ### Wireframe mock-ups
