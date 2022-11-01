@@ -1,5 +1,21 @@
 # British and International Search and Rescue Dogs (B.I.R.D)
 
+Todo: 
+- Rename blog to news
+- Toast disappear
+- Custom error pages
+- Wireframes
+- Datascheme
+- Readme
+- Testing
+- Validation
+- Remove comments
+- Check id, class
+- Unused css
+- Rename files
+- Debug mode
+- Peer review
+
 ## Introduction
 
 BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping cart, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove blog posts to inform site users of new products or provide how to guides and other useful information. The business owner or employees can also respond to reviews that users have left on the site should they deem necessary, or they can delete the review if necessary.
@@ -44,9 +60,8 @@ Please note: To open any links in this document in a new browser tab, please pre
 * To provide users with a simple product selection and purchase experience.
 
 ### The Sites Ideal User
-* Tech enthusiast searching for new products
-* Someone looking to buy a new product for their personal PC build
-* Someone looking for inspiration for new things they could add to their PC build
+* Someone looking support the charity by purchasing products
+* Someone looking to learn more about the charity
 
 ### Site Goals
 * To provide users with a place to purchase their watercooling products
