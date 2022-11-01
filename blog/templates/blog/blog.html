@@ -12,7 +12,7 @@
 {% block content %}
 <div class="overlay"></div>
 <section class="header">
-    <div class="row">
+    <div class="row mt-1 mt-md-5">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Latest News</h2>
             {% if user.is_authenticated %}
@@ -22,68 +22,63 @@
         </div>
     </div>
 </section>
-<section class="container">
-    <div class="row">
-        <div class="blog-post-container col-12">
-            {% if posts %}
-            {% for post in posts %}
-            <div class="blog-card-post-container row">
-                <div class="blog-image-container col-6">
-                    {% if post.image %}
-                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-card-image">
-                    {% else %}
-                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="blog-card-image">
-                    {% endif %}
-                </div>
-                <a class="blog-card-content-container col-4" href="{% url 'blog_post_detail' post.slug %}">
-                    <div class="row">
-                        <h5>{{ post.title }}</h5>
-                        <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
-                        <p>{{ post.content|slice:350|safe }}</p>
-                    </div>
-                    <div class="row">
-
-                        {% if request.user.is_superuser %}
-                        <div>
-                            <a href="{% url 'edit_blog_post' post.slug %}" class="btn btn-info">Edit Post</a>
-                            <button type="button" class="btn btn-secondary" data-toggle="modal"
-                                data-target="#delete-post-{{post.slug}}-modal">
-                                Delete
-                            </button>
-                        </div>
-                    </div>
+<section class="container blog-post-container">
+    {% if posts %}
+    {% for post in posts %}
+    <div class="blog-card-post-container">
+        <div class="row my-3">
+            <div class="blog-image-container col-3">
+                {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-card-image">
+                {% else %}
+                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="blog-card-image">
+                {% endif %}
+            </div>
+            <div class="blog-card-content-container col-9 d-flex align-items-center">
+                <a class="text-black text-decoration-none" href="{% url 'blog_post_detail' post.slug %}">
+                    <h3 class="col-12 px-0">{{ post.title }}</h3>
+                    <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
+                    <p class="col-12">{{ post.content|striptags|truncatechars:140|safe }}</p>
                 </a>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="delete-post-{{post.slug}}-modal" tabindex="-1"
-                aria-labelledby="delete-post-modal-heading" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="delete-post-modal-heading">Delete Blog Post
-                            </h5>
-                            <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"><i
-                                    class="fa fa-close"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to delete the blog post titled:</p>
-                            <p>"<strong>{{ post.title }}</strong>"</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">Close</button>
-                            <a class="btn btn-danger" href="{% url 'delete_blog_post' post.id %}">Delete
-                                Blog
-                                Post</a>
-                        </div>
+        </div>
+        {% if request.user.is_superuser %}
+        <div class="d-flex justify-content-end row">
+            <a href="{% url 'edit_blog_post' post.slug %}" class="btn btn-info m-1">Edit Post</a>
+            <button type="button" class="btn btn-secondary m-1" data-toggle="modal"
+                data-target="#delete-post-{{post.slug}}-modal">
+                Delete
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="delete-post-{{post.slug}}-modal" tabindex="-1"
+            aria-labelledby="delete-post-modal-heading" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="delete-post-modal-heading">Delete Blog Post
+                        </h5>
+                        <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"><i
+                                class="fa fa-close"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete the blog post titled:</p>
+                        <p>"<strong>{{ post.title }}</strong>"</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <a class="btn btn-danger" href="{% url 'delete_blog_post' post.id %}">Delete
+                            Blog
+                            Post</a>
                     </div>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
-            {% else %}
-            <p>There are no posts for you to read right now.</p>
-            {% endif %}
         </div>
+        {% endif %}
     </div>
+    {% endfor %}
+    {% else %}
+    <p>There are no posts for you to read right now.</p>
+    {% endif %}
 </section>
 {% endblock %}

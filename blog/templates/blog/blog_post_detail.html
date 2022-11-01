@@ -16,9 +16,12 @@
         <div class="col text-center mt-3">
             <h2 class="logo-font">{{ post.title }}</h2>
             <h5>{{ post.author.get_full_name }}</h5>
-            {% if user.is_authenticated %}
-            <a href="{% url 'add_blog_post' %}" class="btn btn-info">Add Post</a>
-            {% endif %}
+            <a href="{% url 'blog' %}" class="btn btn-outline-black rounded-0 mt-2">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back to News</span>
+            </a>
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -26,17 +29,15 @@
 <div class="container-fluid">
     <article class="blog-post-container mt-4">
         <div class="row d-flex flex-column">
-
-            {% if post.image %}
-            <div class="blog-image-container col-10 mx-auto">
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-image mx-auto">
-            </div>
-            {% endif %}
             <div class="blog-content-container col-10 mx-auto">
                 <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
                 <p>{{ post.content|safe }}</p>
             </div>
-
+            {% if post.image %}
+            <div class="blog-image-container col-6 text-center mx-auto">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-image w-100">
+            </div>
+            {% endif %}
         </div>
     </article>
     {% if user.is_authenticated %}

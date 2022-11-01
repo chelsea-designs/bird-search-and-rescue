@@ -11,12 +11,19 @@
 
 {% block content %}
 <div class="overlay"></div>
+<section class="header">
+    <div class="row mt-1 mt-md-5">
+        <div class="col text-center mt-3">
+            {% if member %}
+            <h2>Edit Team Member</h2>
+            {% else %}
+            <h2>Add Team Member</h2>
+            {% endif %}
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</section>
 <div class="container-fluid">
-    {% if member %}
-    <h2>Edit Team Member</h2>
-    {% else %}
-    <h2>Add Team Member</h2>
-    {% endif %}
     <form
         action="{% if member %}{% url 'edit_team_member' member.slug %}{% else %}{% url 'add_team_member' %}{% endif %}"
         method="post" enctype="multipart/form-data" class="mt-2">
@@ -32,7 +39,7 @@
         {{ field | as_crispy_field}}
         {% endif %}
         {% endfor %}
-        <button type="submit" class="btn btn-info mt-2">{% if member %}Save Changes{% else %}Add Team
+        <button type="submit" class="btn btn-info my-2">{% if member %}Save Changes{% else %}Add Team
             Member{% endif %}</button>
     </form>
 </div>
