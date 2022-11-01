@@ -1,7 +1,7 @@
 # British and International Search and Rescue Dogs (B.I.R.D)
 
 Todo: 
-- Rename blog to news
+- Rename News to news
 - Toast disappear
 - Custom error pages
 - Wireframes
@@ -18,11 +18,11 @@ Todo:
 
 ## Introduction
 
-BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping cart, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove blog posts to inform site users of new products or provide how to guides and other useful information. The business owner or employees can also respond to reviews that users have left on the site should they deem necessary, or they can delete the review if necessary.
+BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping cart, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove News posts to inform site users of new products or provide how to guides and other useful information. The business owner or employees can also respond to reviews that users have left on the site should they deem necessary, or they can delete the review if necessary.
 
 This is the fifth project for the Code Institute Diploma in Software Development with eCommerce.
 
-The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, Blog Posts and Categories along with Reviews and Responses.
+The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, News Posts and Categories along with Reviews and Responses.
 
 ![Screenshot of homepage](/static/docs/img/responsive-site-image.png)
 
@@ -127,10 +127,10 @@ Checkout: For the checkout page the user will be required to enter, or confirm t
 Checkout Page
 Order Confirmation: Provided the users payment is processed successfully, they will be taken to the order confirmation screen which will provide the user with a summary of the entire order as it has been recorded along with their order number. The order number will need to be unique for each order. If the user is a registered user and logged in at the time of order, they should be able to access the order details again at a later date. Non registered users should be able to access their orders status by entering the order number somewhere else on the site.
 Order Confirmation page
-All Blog Posts Page: The blog posts page is a key page within the site. From a user experience persepective, the blog provides an opportunity for the company to directly communicate with its customers, or prospective customers. This communication can be in the form of guides, product reviews, or any other type of communication that they believe their customers might find useful. The content the company can produce for this section of the site is important for SEO purposes also and can assist in their overall marketing efforts. Ideally therefore, users should be able to access the blog section of the site easily, and also be able to quickly assess which blog posts they are interested in.
-All Blog Posts Page
-Individual Blog Post: For the individual blog post page the full details of the post are available. The layout is a clean simple design with an image at the top followed by the main content of the post.
-Individual Blog Post Page
+All News Posts Page: The News posts page is a key page within the site. From a user experience persepective, the News provides an opportunity for the company to directly communicate with its customers, or prospective customers. This communication can be in the form of guides, product reviews, or any other type of communication that they believe their customers might find useful. The content the company can produce for this section of the site is important for SEO purposes also and can assist in their overall marketing efforts. Ideally therefore, users should be able to access the News section of the site easily, and also be able to quickly assess which News posts they are interested in.
+All News Posts Page
+Individual News Post: For the individual News post page the full details of the post are available. The layout is a clean simple design with an image at the top followed by the main content of the post.
+Individual News Post Page
 User Account Page: The user account page is a central location from which users can manage their entire account. All potential options need to be easily accessible from this one page. A short menu of available options is located at the top of the page followed by the ability for users to add addresses, or change their default address to another saved address. Finally the option to delete their account is clearly available. By providing the option clearly and not hidden away it promotes trust with the user that they are in full control of their account.
 User Account Page
 
@@ -313,29 +313,29 @@ Registered users can also save products to their wishlist by clicking on the hea
 
 
 
-### Blog
-Users have access to view blog post articles written by the company. These articles will form part of the company SEO and web marketing strategies and allows them to include information on topics that will be interesting to their users. Clever use of the blog post section of the site will allow the company to incorporate both short tail keywords and long tail keywords, providing answers to target users questions. This will improve their overall search engine ranking performance whilst providing users with beneficial information and improving their overall experience and trust within the company.
-Users are able to select which blog post to read through the summary list provided on the main blog page.
+### News
+Users have access to view News post articles written by the company. These articles will form part of the company SEO and web marketing strategies and allows them to include information on topics that will be interesting to their users. Clever use of the News post section of the site will allow the company to incorporate both short tail keywords and long tail keywords, providing answers to target users questions. This will improve their overall search engine ranking performance whilst providing users with beneficial information and improving their overall experience and trust within the company.
+Users are able to select which News post to read through the summary list provided on the main News page.
 
 
 
-![Blog Post Page](/static/docs/img/features/blog-posts-desktop.png)
+![News Post Page](/static/docs/img/features/News-posts-desktop.png)
 
 
 
-The blog detail page provides the user with the full blog post content
+The News detail page provides the user with the full News post content
 
 
 
-![Blog post detail page](/static/docs/img/features/blog-detail-desktop.png)
+![News post detail page](/static/docs/img/features/News-detail-desktop.png)
 
 
 
-Whilst employees will have access to additional options in order to access areas of the site that allow them to add, edit, delete blog posts. They also have access to blog post category management options that allow them to add, edit and delete categories for blog posts.
+Whilst employees will have access to additional options in order to access areas of the site that allow them to add, edit, delete News posts. They also have access to News post category management options that allow them to add, edit and delete categories for News posts.
 
 
 
-![Employee view of blog posts](/static/docs/img/features/blog-category-management.png)
+![Employee view of News posts](/static/docs/img/features/News-category-management.png)
 
 
 
@@ -391,7 +391,7 @@ All code passed the validation, with only code generated by other parties produc
 * The HTMX library that is inserted into the HTML template by django produces a warning stating that the link does not need to have the javascript file type declared.
 
 #### Automated Testing
-Automated tests were written for the blog and profile apps, along with the product forms. A total of 45 different tests were written to test the urls, views and forms and demonstrate my understanding of the testing procedures. In order to run the tests, you will need to clone the repo. In the settings for the project the database is set to point at the specified database when a database url is present within the config variables. Provided that you do not include a database url in the config variables django will run the tests on a test database utilising sqlite3. Django will not run the tests on the postgresql database from a heroku application, therefore you will need to ensure not to include the database url in the config variables.
+Automated tests were written for the News and profile apps, along with the product forms. A total of 45 different tests were written to test the urls, views and forms and demonstrate my understanding of the testing procedures. In order to run the tests, you will need to clone the repo. In the settings for the project the database is set to point at the specified database when a database url is present within the config variables. Provided that you do not include a database url in the config variables django will run the tests on a test database utilising sqlite3. Django will not run the tests on the postgresql database from a heroku application, therefore you will need to ensure not to include the database url in the config variables.
 
 
 
@@ -412,7 +412,7 @@ Google's lighthouse testing was utilised to gain an overall assessment of the pe
 
 * Whilst validating the HTML it reported an error that I had included a placeholder for a checkbox field which is not allowed. To fix this error I removed the placeholder from the list within the forms.py file for the relevant address form. Thinking that will sort the error out and its only a placeholder so doesn't affect anything else. It did fix the HTML validation error straight away, however, it created a bug within another part of the code where the fields were checked whether they were required or not. If a field was required it adds '*' to signify it to users, if it is not, it inserts the placeholder. However, now I had removed the placeholder, anytime the form was requested it would return a 500 error. Whilst I appreciated the ability to test the custom 500 error page worked correctly on the production site it was a bug that took me a little while to track down the route cause and fix. The fix was simple enough and achieved by including the default field of the model within the if statement and excluding it from the placeholder assignment.
 
-* Within the blog post page employee view, there is a category management section that can be activated. This section allows an employee to edit, delete and create categories for blog posts. Forms are inserted via htmx into the html on demand to allow the employee to carry out the task required. As the forms are inserted via htmx, it was possible to insert multiple forms at the same time into the page and edit multiple categories at once, and have the add category form open as well. If the user did this, a HTML validation error would occur as the form is duplicated it contains duplicate ID's. To overcome the HTML validation error possibility, JavaScript was utilised to prevent the user from opening multiple forms at the same time, this was achieved by disabling the other buttons when a user clicks on one of the edit buttons or add buttons, until either the user cancels their action or has completed their task.
+* Within the News post page employee view, there is a category management section that can be activated. This section allows an employee to edit, delete and create categories for News posts. Forms are inserted via htmx into the html on demand to allow the employee to carry out the task required. As the forms are inserted via htmx, it was possible to insert multiple forms at the same time into the page and edit multiple categories at once, and have the add category form open as well. If the user did this, a HTML validation error would occur as the form is duplicated it contains duplicate ID's. To overcome the HTML validation error possibility, JavaScript was utilised to prevent the user from opening multiple forms at the same time, this was achieved by disabling the other buttons when a user clicks on one of the edit buttons or add buttons, until either the user cancels their action or has completed their task.
 
 * Order Status updates. Within the order management section of the site, employees have the ability to update the status of an order. To help with finding the correct order, multiple filters are available for them to search the orders within the database. One of these filters allows for searching the previous days orders. This works as designed during normal working hours, however when testing the functionality it was discovered that during the first hour of the day, so the time period between midnight and 1am the filter would bring back the previous day plus one's orders, not the previous days. This resolves itself as soon as the time clicks past 1am. As the only time that this will be triggered is in the middle of the night, it was deemed acceptable to leave as it currently is and not attempt to edit the library utilised to include the filters. Should the business operate 24 hours a day and require the functionality to pull the previous days orders during that one hour window it would obviously need to be resolved.
 

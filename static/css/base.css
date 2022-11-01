@@ -294,9 +294,9 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* blog posts */
+/* news posts */
 
-.blog-card-image {
+.news-card-image {
     max-width: min(100%, 485px);
 }
 

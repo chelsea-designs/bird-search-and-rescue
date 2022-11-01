@@ -4,7 +4,7 @@ from django.utils.text import slugify
 
 # Create your models here.
 
-class BlogPost(models.Model):
+class NewsPost(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
     slug = models.SlugField(max_length=128, null=False, blank=False, unique=True)
     author = models.ForeignKey(User,
@@ -26,4 +26,4 @@ class BlogPost(models.Model):
                 self.slug = slugify(self.title)
         else:
             self.slug = slugify(self.title)
-        super(BlogPost, self).save(*args, **kwargs)
+        super(NewsPost, self).save(*args, **kwargs)

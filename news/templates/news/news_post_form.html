@@ -13,11 +13,11 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     {% if post %}
-    <h1>Edit Blog Post</h1>
+    <h1>Edit News Post</h1>
     {% else %}
-    <h1>Add Blog Post</h1>
+    <h1>Add News Post</h1>
     {% endif %}
-    <form action="{% if post %}{% url 'edit_blog_post' post.slug %}{% else %}{% url 'add_blog_post' %}{% endif %}"
+    <form action="{% if post %}{% url 'edit_news_post' post.slug %}{% else %}{% url 'add_news_post' %}{% endif %}"
         method="post" enctype="multipart/form-data" class="mt-2">
         {% csrf_token %}
         {% for field in form %}
@@ -31,7 +31,7 @@
         {{ field | as_crispy_field}}
         {% endif %}
         {% endfor %}
-        <button type="submit" class="btn btn-info mt-2">{% if post %}Save Changes{% else %}Add Blog
+        <button type="submit" class="btn btn-info mt-2">{% if post %}Save Changes{% else %}Add News
             Post{% endif %}</button>
     </form>
 </div>
@@ -44,7 +44,7 @@
     selector.addEventListener('change', (event) => {
         let file = selector.files[0];
         let filename = document.getElementById('filename');
-        filename.textContent = `Blog post image will be set to: ${file.name}`;
+        filename.textContent = `News post image will be set to: ${file.name}`;
     });
 </script>
 

@@ -1,15 +1,15 @@
 from django import forms
-from .models import BlogPost
+from .models import NewsPost
 from django_summernote.widgets import SummernoteWidget
 from .widgets import CustomClearableFileInput
 
 
-class BlogPostForm(forms.ModelForm):
+class NewsPostForm(forms.ModelForm):
     '''
-    form to add blog posts
+    form to add news posts
     '''
     class Meta:
-        model = BlogPost
+        model = NewsPost
         fields = (
             'title',
             'image_url',

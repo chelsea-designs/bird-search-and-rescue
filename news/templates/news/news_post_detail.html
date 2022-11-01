@@ -16,7 +16,7 @@
         <div class="col text-center mt-3">
             <h1 class="logo-font">{{ post.title }}</h1>
             <h2>{{ post.author.get_full_name }}</h2>
-            <a href="{% url 'blog' %}" class="btn btn-outline-black rounded-0 mt-2">
+            <a href="{% url 'news' %}" class="btn btn-outline-black rounded-0 mt-2">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -27,15 +27,15 @@
     </div>
 </section>
 <div class="container-fluid">
-    <article class="blog-post-container mt-4">
+    <article class="news-post-container mt-4">
         <div class="row d-flex flex-column">
-            <div class="blog-content-container col-10 mx-auto">
+            <div class="news-content-container col-10 mx-auto">
                 <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
                 <p>{{ post.content|safe }}</p>
             </div>
             {% if post.image %}
-            <div class="blog-image-container col-6 text-center mx-auto">
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-image w-100">
+            <div class="news-image-container col-6 text-center mx-auto">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="news-image w-100">
             </div>
             {% endif %}
         </div>
@@ -47,17 +47,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="delete-post-modal-heading">Delete Blog Post</h5>
+                    <h5 class="modal-title" id="delete-post-modal-heading">Delete News Post</h5>
                     <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close"><i
                             class="fa fa-close"></i></button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you want to delete the blog post titled:</p>
+                    <p>Are you sure you want to delete the news post titled:</p>
                     <p>"<strong>{{ post.title }}</strong>"</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn" data-dismiss="modal">Close</button>
-                    <a class="btn btn-danger" href="{% url 'delete_blog_post' post.id %}">Delete Blog Post</a>
+                    <a class="btn btn-danger" href="{% url 'delete_news_post' post.id %}">Delete News Post</a>
                 </div>
             </div>
         </div>
