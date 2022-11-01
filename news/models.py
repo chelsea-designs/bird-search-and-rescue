@@ -4,9 +4,11 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+
 class NewsPost(models.Model):
     title = models.CharField(max_length=128, null=False, blank=False)
-    slug = models.SlugField(max_length=128, null=False, blank=False, unique=True)
+    slug = models.SlugField(max_length=128, null=False, blank=False,
+                            unique=True)
     author = models.ForeignKey(User,
                                null=False,
                                blank=False,

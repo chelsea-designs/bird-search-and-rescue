@@ -55,7 +55,8 @@ def editTeamMember(request, slug):
     member = get_object_or_404(TeamMember, slug=slug)
     form = TeamMemberForm(instance=member)
     if request.method == 'POST':
-        form = TeamMemberForm(request.POST, request.FILES or None, instance=member)
+        form = TeamMemberForm(request.POST, request.FILES or None,
+                              instance=member)
         if form.is_valid():
             edited_form = form.save(commit=False)
             edited_form.save()

@@ -12,4 +12,5 @@ class TeamMemberAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 admin.site.register(TeamMember, TeamMemberAdmin)

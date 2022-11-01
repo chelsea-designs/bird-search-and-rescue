@@ -1,8 +1,6 @@
 # British and International Search and Rescue Dogs (B.I.R.D)
 
 Todo: 
-- Rename News to news
-- Toast disappear
 - Custom error pages
 - Wireframes
 - Datascheme
