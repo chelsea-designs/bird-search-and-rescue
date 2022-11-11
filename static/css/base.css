@@ -366,11 +366,3 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
-
-/* https://blog.wernull.com/2013/04/debug-ghost-css-elements-causing-unwanted-scrolling/
-* {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-}
-*/
