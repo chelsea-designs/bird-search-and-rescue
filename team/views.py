@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, staff_member_required
 from django.contrib.auth import get_user_model
 from django.contrib import messages
 from .forms import TeamMemberForm
@@ -21,7 +21,7 @@ def team(request):
     return render(request, 'team/team.html', context)
 
 
-@login_required
+@staff_member_required
 def addTeamMember(request):
     '''
     View to handle displaying add team member form
@@ -47,7 +47,7 @@ def addTeamMember(request):
     return render(request, 'team/team_member_form.html', context)
 
 
-@login_required
+@staff_member_required
 def editTeamMember(request, slug):
     '''
     View to display prefilled form to edit a team member
@@ -75,7 +75,7 @@ def editTeamMember(request, slug):
     return render(request, 'team/team_member_form.html', context)
 
 
-@login_required
+@staff_member_required
 def deleteTeamMember(request, pk):
     '''
     View to handle the deletion of a team member

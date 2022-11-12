@@ -34,7 +34,7 @@
                 <img src="{{ MEDIA_URL }}no_image.png" alt="{{ product.name }}" class="news-card-image">
                 {% endif %}
             </div>
-            <div class="news-card-content-container col-12 col-lg-9 d-flex align-items-center">
+            <div class="news-card-content-container col-12 col-lg-9 align-items-center">
                 <a class="text-black text-decoration-none" href="{% url 'news_post_detail' post.slug %}">
                     <h2 class="col-12 px-0">{{ post.title }}</h2>
                     <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->

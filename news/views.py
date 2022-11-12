@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, staff_member_required
 from django.contrib.auth import get_user_model
 from django.contrib import messages
 from .forms import NewsPostForm
@@ -32,7 +32,7 @@ def newsPostDetail(request, slug):
     return render(request, 'news/news_post_detail.html', context)
 
 
-@login_required
+@staff_member_required
 def addNewsPost(request):
     '''
     View to handle displaying add news form
@@ -59,7 +59,7 @@ def addNewsPost(request):
     return render(request, 'news/news_post_form.html', context)
 
 
-@login_required
+@staff_member_required
 def editNewsPost(request, slug):
     '''
     View to display prefilled form to edit a news post
@@ -87,7 +87,7 @@ def editNewsPost(request, slug):
     return render(request, 'news/news_post_form.html', context)
 
 
-@login_required
+@staff_member_required
 def deleteNewsPost(request, pk):
     '''
     View to handle the deletion of a news post
