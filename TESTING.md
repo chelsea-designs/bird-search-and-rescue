@@ -5,7 +5,7 @@ To navigate back to the main README click [here](README.md)
 ## Validators
 
 ### Python Validation
-The Python code was checked using the flake8 python linter using the command python3 -m flake8. No errors were reported by the validator in the files I created. The settings.py file did however did contain an error for env being imported but unused, which is a false positive. Similarly, another error in checkout/apps.py however 'checkout.signals' is being passed in and used elsewhere, so is not an issue.
+The Python code was checked using the flake8 python linter using the command python3 -m flake8. No errors were reported by the validator in the files I created. The settings.py file did however did contain an error for env being imported but unused, which is a false positive. Similarly, another error in checkout/apps.py however 'checkout.signals' is being passed in and used elsewhere, so is not an issue. I also decided to disregard line too long errors on somelines such as secret keys etc.
 
 * Screenshots of the validator report is [here](static/docs/img/validators/python-validation.png) 
 
@@ -45,7 +45,6 @@ Pages with a Summernote text editor will return six (6) HTML validation errors. 
 Google's lighthouse testing was utilised to gain an overall assessment of the performance of the site. Whilst all the areas of the test return a green score above 98, the overall performance figure fluctuates depending on the speed of the internet connection when the test is performed, having returned scores as low as 92 and as high as 100 whilst running the test multiple times. The best practice score is impacted by the stripe included javascript files along with the use of the bootstrap and jquery libraries. The SEO score returned a perfect 100.
 
 ![Google Lighthouse Results](/static/docs/img/lighthouse.png)
-
 
 
 #### Notable Bugs

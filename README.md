@@ -1,12 +1,5 @@
 # British and International Search and Rescue Dogs (B.I.R.D)
 
-Todo: 
-- Code comments and docstrings
-- Readme 
-- Testing
-- HTML Validation - aria label
-- Debug mode false
-
 ## Introduction
 
 BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping bag, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove news posts to inform site users of new activities and missions or other useful information. They can also add, edit and remove team member biographies.
@@ -288,14 +281,6 @@ Registered users can access controls for their account through the My profile op
 
 ![User Profile Page](/static/docs/img/features/profile.png)
 
-
-
-### User Wishlist
-Registered users can also save products to their wishlist by clicking on the heart icon within the product details. Once they have added a product to their wishlist they are informed by the heart icon becoming filled in colour. They will also see the product listed on the My Wishlist page. Here users can add the products to their bag without having to search for them, select the quantity to be added. Remove the product from their wishlist, or follow the link to the full product details.
-
-
-
-![My Wishlist Page](/static/docs/img/features/wishlist.png)
 
 
 
