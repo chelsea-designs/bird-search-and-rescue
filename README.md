@@ -15,20 +15,20 @@ Todo:
 
 ## Introduction
 
-BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping cart, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove News posts to inform site users of new products or provide how to guides and other useful information. The business owner or employees can also respond to reviews that users have left on the site should they deem necessary, or they can delete the review if necessary.
+BIRD consists of highly trained volunteers that form a totally self supporting team used to assist in disasters at both home and abroad. They have deployed to many disasters worldwide and also assist the Police, HM Coastguard and Fire Service at home. They have no government funding and exist solely on donations and fund raising. The BIRD website is built on Django using Python, JavaScript, HTML and CSS. The site is used for selling products for fundraising purposes and to update public on their latest activities. Users of the site can search for products via manual keyword search, filter by category or browse through all products available. They can select differing quantities of products for purchase and add them to their shopping cart, and proceed through a purchase process designed to be simple and with minimal steps. The business owner and employees can add, edit and remove products from the site without accessing the admin interface. They can also add, edit and remove news posts to inform site users of new activities and missions or other useful information. They can also add, edit and remove team member biographies.
 
-This is the fifth project for the Code Institute Diploma in Software Development with eCommerce.
+This is the fourth project for the Code Institute Diploma in Software Development.
 
-The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, News Posts and Categories along with Reviews and Responses.
+The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, News Posts and Categories along with Team Member Profiles.
 
 ![Screenshot of homepage](/static/docs/img/responsive-site-image.png)
 
-[View the live website on Heroku](https://druid-computers.herokuapp.com/)
+[View the live website on Heroku](https://bird-sandr.herokuapp.com/)
 
 Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
 
 ## Table of Contents
-- [Druid Computers](#druid-computers)
+- [British and International Search and Rescue Dogs (B.I.R.D)](#british-and-international-search-and-rescue-dogs-(B.I.R.D))
   * [Introduction](#introduction)
   * [Table of Contents](#table-of-contents)
   * [UX](#ux)
@@ -42,7 +42,6 @@ Please note: To open any links in this document in a new browser tab, please pre
       + [Visual Design](#visual-design)
   * [Features](#features)
   * [Future Enhancements](#future-enhancements)
-  * [Social Media](#social-media-marketing)
   * [Testing](#testing)
   * [Deployment](#deployment)
   * [Credits](#credits)
@@ -51,7 +50,7 @@ Please note: To open any links in this document in a new browser tab, please pre
 ## UX
 
 ### Overall Goals
-* To provide an ecommerce solution for a small business selling computer products to consumers - B2C
+* To provide an ecommerce solution for a small charity selling fundraising products to consumers - B2C
 * To enable business employees to maintain and update the site content in line with their needs easily.
 * To provide the business owner/manager a degree of control over the site.
 * To provide users with a simple product selection and purchase experience.
@@ -61,10 +60,9 @@ Please note: To open any links in this document in a new browser tab, please pre
 * Someone looking to learn more about the charity
 
 ### Site Goals
-* To provide users with a place to purchase their watercooling products
-* To promote the product range of Druid Computers
-* To promote Druid Computers as the preferred site for users to purchase their watercooling products
-* To increase the standing of Druid Computers within the watercooling industry and community.
+* To provide users with a place to learn about B.I.R.D.
+* To promote the fundraising products range of B.I.R.D.
+* To increase the standing of B.I.R.D within the charity sector and community.
 
 ### User Stories
 | ID  | As A/An    | I want to...                                                      | So I can...                                                                           |
@@ -102,7 +100,9 @@ Please note: To open any links in this document in a new browser tab, please pre
 | 26  | Site Owner | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
 |     |            | **_News Section_**                                                |                                                                                       |
 | 27  | Customer    | View list of news articles                                        | Choose a news article to read                                                         |
-| 28  | Customer    | View full news article                                            | Read detailed about latest news and activities                                        |
+| 28  | Customer    | View full news article                                            | Read detailed about latest news and activities
+|     |            | **_About Section_**                                                |                                                                                       |
+| 29  | Customer    | View list of team members                                        | Learn about the team                                                         |
 
 ## Design
 ### Wireframe mock-ups
@@ -183,7 +183,7 @@ There are also navigation links within the footer from which users can access ar
 
 
 ### Homepage
-The home page greets users with a welcome message overlaid on a close up image of cooling pipes inside a computer system. This provides a welcome to all users whilst indiciating the sites purpose. The clear links within the navigation bar indicate that the site is a shop whilst the call to action cards below the welcome/hero section direct users to specific product categories quickly and easily.
+The home page greets users with a welcome message overlaid on an image of a dog in nature. This provides a welcome to all users whilst indiciating the sites purpose. The clear links within the navigation bar indicate that the site is a shop whilst the call to action button below the welcome/hero section direct users to donate, which emphasises the shop is for charitable purposes.
 
 
 
