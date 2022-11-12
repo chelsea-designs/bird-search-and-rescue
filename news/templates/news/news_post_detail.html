@@ -40,7 +40,7 @@
             {% endif %}
         </div>
     </div>
-    {% if user.is_authenticated %}
+    {% if request.user.is_superuser %}
     <!-- Modal -->
     <div class="modal fade" id="delete-post-modal" tabindex="-1" aria-labelledby="delete-post-modal-heading"
         aria-hidden="true">

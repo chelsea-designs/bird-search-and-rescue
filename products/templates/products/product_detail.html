@@ -106,7 +106,7 @@
         </div>
     </div>
 </div>
-{% if user.is_authenticated %}
+{% if request.user.is_superuser %}
 <!-- Modal -->
 <div class="modal fade" id="delete-product-detail-modal" tabindex="-1" aria-labelledby="delete-product-modal-heading"
     aria-hidden="true">

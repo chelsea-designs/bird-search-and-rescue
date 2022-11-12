@@ -15,7 +15,7 @@
     <div class="row mt-1 mt-md-5">
         <div class="col text-center">
             <h1 class="logo-font">About B.I.R.D</h1>
-            {% if user.is_authenticated %}
+            {% if request.user.is_superuser %}
             <a href="{% url 'add_team_member' %}" class="btn btn-info my-3">Add Team Member</a>
             {% endif %}
             <hr class="w-50 mb-1">

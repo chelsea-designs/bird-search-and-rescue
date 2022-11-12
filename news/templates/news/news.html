@@ -15,7 +15,7 @@
     <div class="row mt-1 mt-md-5">
         <div class="col text-center mt-3">
             <h1 class="logo-font">Latest News</h1>
-            {% if user.is_authenticated %}
+            {% if request.user.is_superuser %}
             <a href="{% url 'add_news_post' %}" class="btn btn-info">Add Post</a>
             {% endif %}
             <hr class="w-50 mb-1">
