@@ -35,7 +35,7 @@
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
-                {% if request.user.is_superuser %}
+                {% if request.user.is_staff %}
                 <small class="ml-3">
                     <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a> |
                     <button type="button" class="btn btn-secondary" data-toggle="modal"
@@ -106,7 +106,7 @@
         </div>
     </div>
 </div>
-{% if request.user.is_superuser %}
+{% if request.user.is_staff %}
 <!-- Modal -->
 <div class="modal fade" id="delete-product-detail-modal" tabindex="-1" aria-labelledby="delete-product-modal-heading"
     aria-hidden="true">

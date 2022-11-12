@@ -99,7 +99,7 @@
                                     {% else %}
                                     <h5 class="text-muted">No Rating</h5>
                                     {% endif %}
-                                    {% if request.user.is_superuser %}
+                                    {% if request.user.is_staff %}
                                     <h5 class="ml-3">
                                         <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a> |
                                         <button type="button" class="btn btn-secondary" data-toggle="modal"

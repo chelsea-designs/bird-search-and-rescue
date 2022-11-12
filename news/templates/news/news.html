@@ -15,7 +15,7 @@
     <div class="row mt-1 mt-md-5">
         <div class="col text-center mt-3">
             <h1 class="logo-font">Latest News</h1>
-            {% if request.user.is_superuser %}
+            {% if request.user.is_staff %}
             <a href="{% url 'add_news_post' %}" class="btn btn-info">Add Post</a>
             {% endif %}
             <hr class="w-50 mb-1">
@@ -42,7 +42,7 @@
                 </a>
             </div>
         </div>
-        {% if request.user.is_superuser %}
+        {% if request.user.is_staff %}
         <div class="d-flex justify-content-end row">
             <a href="{% url 'edit_news_post' post.slug %}" class="btn btn-info m-1">Edit Post</a>
             <button type="button" class="btn btn-secondary m-1" data-toggle="modal"

@@ -79,7 +79,7 @@
                         </a>
                         <div class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
+                            {% if request.user.is_staff %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
                             <a href="{% url 'add_news_post' %}" class="dropdown-item">Add News Item</a>
                             <a href="{% url 'add_team_member' %}" class="dropdown-item">Add Team Member</a>
