@@ -2,7 +2,7 @@
 
 Todo: 
 - Code comments and docstrings
-- Readme
+- Readme 
 - Testing
 - HTML Validation - aria label
 - Debug mode false

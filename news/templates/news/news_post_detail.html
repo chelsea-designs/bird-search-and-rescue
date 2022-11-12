@@ -31,7 +31,7 @@
         <div class="row d-flex flex-column">
             <div class="news-content-container col-10 mx-auto">
                 <!-- Summernote content needs the safe tag to prevent code tags showing up in displayed content -->
-                <p>{{ post.content|safe }}</p>
+                <p>{{post.content|safe}}</p>
             </div>
             {% if post.image %}
             <div class="news-image-container col-6 text-center mx-auto">

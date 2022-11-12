@@ -118,6 +118,12 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+SUMMERNOTE_CONFIG = {
+    # Use this when you're already using Bootstrap/jQuery based themes.
+    'iframe': True,
+}
+
+
 WSGI_APPLICATION = 'bird_sandr.wsgi.application'
 
 
