@@ -40,6 +40,7 @@
 
     // Increment quantity
     $('.increment-qty').click(function (e) {
+        console.log("increase working")
         e.preventDefault();
         var itemId = $(this).data('item_id');
         var size = $(this).data('size');
@@ -50,12 +51,14 @@
             var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
         }
         var currentValue = parseInt($(closestInput).val());
-        $(allQuantityInputs).val(currentValue + 1);
+        console.log("allqty inputs no size", currentValue)
+        $(closestInput).val(currentValue + 1);
         handleEnableDisable(itemId, size);
     });
 
     // Decrement quantity
     $('.decrement-qty').click(function (e) {
+        console.log("decrease working")
         e.preventDefault();
         var itemId = $(this).data('item_id');
         var size = $(this).data('size');
@@ -66,7 +69,7 @@
             var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
         }
         var currentValue = parseInt($(closestInput).val());
-        $(allQuantityInputs).val(currentValue - 1);
+        $(closestInput).val(currentValue - 1);
         handleEnableDisable(itemId, size);
     });
 </script>

@@ -4,13 +4,8 @@ Todo:
 - Code comments and docstrings
 - Readme
 - Testing
-- Validation
-- Remove comments
-- Check id, class
-- Unused css
-- Rename files
+- HTML Validation - aria label
 - Debug mode false
-- Peer review
 
 ## Introduction
 
@@ -366,6 +361,7 @@ The site has been launched with a minimal viable product phase in mind. Future d
 * Account deletion on front end
 * Extra payment methods
 * Automated testing
+* Update password from My Profile
 
 
 ## Testing
