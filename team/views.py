@@ -15,7 +15,8 @@ def team(request):
     '''
     members = TeamMember.objects.all().order_by('name')
     context = {
-        'members': members
+        'members': members,
+        'on_about_page': True
     }
     return render(request, 'team/team.html', context)
 

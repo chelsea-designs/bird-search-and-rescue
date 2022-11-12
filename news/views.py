@@ -15,7 +15,8 @@ def news(request):
     '''
     posts = NewsPost.objects.all().order_by('-created_on')
     context = {
-        'posts': posts
+        'posts': posts,
+        'on_news_page': True
     }
     return render(request, 'news/news.html', context)
 
