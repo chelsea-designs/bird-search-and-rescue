@@ -2,7 +2,6 @@
 
 Todo: 
 - Code comments and docstrings
-- Dataschema
 - Readme
 - Testing
 - Validation
@@ -34,7 +33,6 @@ Please note: To open any links in this document in a new browser tab, please pre
   * [UX](#ux)
     + [Overall Goals](#overall-goals)
     + [The Sites Ideal User](#the-sites-ideal-user)
-    + [Site Goals](#site-goals)
     + [User Stories](#user-stories)
     + [Design](#design)
       + [Wireframe mock-ups](#wireframe-mock-ups)
@@ -54,15 +52,13 @@ Please note: To open any links in this document in a new browser tab, please pre
 * To enable business employees to maintain and update the site content in line with their needs easily.
 * To provide the business owner/manager a degree of control over the site.
 * To provide users with a simple product selection and purchase experience.
+* To provide users with a place to learn about B.I.R.D.
+* To increase the standing of B.I.R.D within the charity sector and community.
 
 ### The Sites Ideal User
 * Someone looking support the charity by purchasing products
 * Someone looking to learn more about the charity
 
-### Site Goals
-* To provide users with a place to learn about B.I.R.D.
-* To promote the fundraising products range of B.I.R.D.
-* To increase the standing of B.I.R.D within the charity sector and community.
 
 ### User Stories
 | ID  | As A/An    | I want to...                                                      | So I can...                                                                           |
@@ -106,7 +102,7 @@ Please note: To open any links in this document in a new browser tab, please pre
 
 ## Design
 ### Wireframe mock-ups
-Wireframes were produced for the majority of pages, with the exception of pages that were likely to only include a form such as the add product page. A pdf document with the full set of wireframes produced is available [here](/static/docs/wireframes.pdf).
+Low fidelity wireframes were created with Figma for the basic prototyping structure of the main site pages, with the exception of pages that were likely to only include a form such as the add product page. A pdf document with the full set of wireframes produced is available [here](/static/docs/wireframes.pdf).
 
 Attention was paid to the elements that would be present on each page such as the header and the footer.
 The header allows for multiple levels of navigation providing the user with shortcuts to account information, whilst clearly being seperated from the main navigation options. On mobile or tablet devices, the two are seperated, with main site navigation in a mobile menu toggle, and call to action buttons viewable at all times.
@@ -148,10 +144,11 @@ Once I was happy with the overall structure of the site, and the layout of the w
 
 ![Colour Contrast Grid](/static/docs/img/contrast-grid.png)
 
-
-
 ### Typography 
-The main font used was Poppins which is clear and crisp which allowed users the ability to read the text easily and clearly.
+The project uses Google Fonts for the delivery of the main font styling. The main font used was Poppins which is clear and crisp which allowed users the ability to read the text easily and clearly.
+
+### Icons
+All icons were provided by the Font Awesome library.
 
 ##### Images
 Background images were acquired from free image site [Unsplash](https://unsplash.com/), product photos were created on the [manufacturer webpage](https://www.clothes2order.com/).
@@ -361,20 +358,21 @@ Users have the ability to send a message to the company directly through a conta
 
 
 ## Future Enhancements
+The site has been launched with a minimal viable product phase in mind. Future developments would include:
+* Product image carousels
+* Product reviews
+* Comments for news articles
+* Donations page including recurring payments
+* Account deletion on front end
+* Extra payment methods
+* Automated testing
+
 
 ## Testing
 
 ### Testing Strategy
-I utilised an automated and manual testing strategy for the development of the site. A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file [here](TESTING.md).
-Seperate to the functionality testing of the site, and the testing of the code, User Story tests were implemented to ensure that the acceptance criteria of the user stories listed above were met. The commit at which the functionality requirements for each user story were met is listed in the issues section of the repo. It was applied to each issue before it was closed and marked as completed.
+I utilised a manual testing strategy for the development of the site. A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file [here](TESTING.md).
 
-#### Testing Overview
-
-Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area.
-
-[Testing Schedule Overview](/static/docs/testing-schedule.pdf)
-
-A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file [here](TESTING.md)
 
 #### Validator Testing
 All code files were validated using suitable validators for the specific language. The full details can be found in the testing.md file.
@@ -383,14 +381,6 @@ All code passed the validation, with only code generated by other parties produc
 * Bootstrap code produced 260 warnings in the CSS validation. 
 * Fontawesome cdn produced 6 HTML validation errors relating to css variables within the cdn css code. 
 * The HTMX library that is inserted into the HTML template by django produces a warning stating that the link does not need to have the javascript file type declared.
-
-#### Automated Testing
-Automated tests were written for the News and profile apps, along with the product forms. A total of 45 different tests were written to test the urls, views and forms and demonstrate my understanding of the testing procedures. In order to run the tests, you will need to clone the repo. In the settings for the project the database is set to point at the specified database when a database url is present within the config variables. Provided that you do not include a database url in the config variables django will run the tests on a test database utilising sqlite3. Django will not run the tests on the postgresql database from a heroku application, therefore you will need to ensure not to include the database url in the config variables.
-
-
-
-![Automated testing results](/static/docs/img/features/tests.png)
-
 
 
 #### Lighthouse Testing
@@ -478,12 +468,12 @@ Google's lighthouse testing was utilised to gain an overall assessment of the pe
 
 #### Packages Used
 
-* VS Code was used to develop the site
+* Gitpod was used to develop the site
 * Git was utilised for version control and transferring files between the code editor and the repository
 * GitHub was utilised for storing the files for this project
-* Balsamiq was utilised to develop wireframes for the site from which the design was based
-* Adobe Illustrator was used to adapt images for use within the site.
-* Figma was used to develop the database schema during development - I used this instead of a DB app due to the ease with which to document the actual field types rather than some of the online apps which don't include fields that are available.
+* Figma was utilised to develop wireframes for the site from which the design was based
+* Affinity Photo was used to adapt images for use within the site.
+* GraphViz was used to develop the database schema during development - I used this instead of a DB app due to the ease with which to document the actual field types rather than some of the online apps which don't include fields that are available.
 
 #### Resources Used
 
@@ -767,7 +757,7 @@ Within the Heroku Config variables add the 16 character password as the value to
 
 ## Credits
 
-Photo by <a href="https://unsplash.com/@rovaniemi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mauri Karlin</a> on <a href="https://unsplash.com/s/photos/mountain-dog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+* Hero image by [Mauri Karlin on Unsplash](https://unsplash.com/@rovaniemi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-## Ackknowledgements
-
+## Acknowledgements
+* Tutor support
