@@ -8,6 +8,11 @@ body {
     height: calc(100vh - 225px);
     color: #555;
     font-family: 'Poppins';
+    padding-bottom: 50px;
+}
+
+.footer-container {
+    padding-bottom: 45px;
 }
 
 /* from Bulma */
