@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ROOT_URLCONF = 'bird_sandr.urls'
 
@@ -117,11 +118,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
-SUMMERNOTE_CONFIG = {
-    # Use this when you're already using Bootstrap/jQuery based themes.
-    'iframe': True,
-}
 
 
 WSGI_APPLICATION = 'bird_sandr.wsgi.application'
