@@ -41,13 +41,58 @@ Pages with a Summernote text editor will return six (6) HTML validation errors. 
 * [Login](/static/docs/img/validation/login-html.png)
 * [Register](/static/docs/img/validation/register-html.png)
 
-#### Lighthouse Testing
+## Other tests
+### Lighthouse Testing
 Google's lighthouse testing was utilised to gain an overall assessment of the performance of the site. Whilst all the areas of the test return a green score above 98, the overall performance figure fluctuates depending on the speed of the internet connection when the test is performed, having returned scores as low as 92 and as high as 100 whilst running the test multiple times. The best practice score is impacted by the stripe included javascript files along with the use of the bootstrap and jquery libraries. The SEO score returned a perfect 100.
 
 ![Google Lighthouse Results](/static/docs/img/lighthouse.png)
 
+### Accessibility Testing
+I verified the sites accessibility using [WAVE](https://wave.webaim.org/report#/https://bird-sandr.herokuapp.com/#) which returned only one alert, with no errors. The alert notified of a redundant link, however this was an intentional choice to have this, therefore I'm happy to disregard this alert:
+![WAVE Results](/static/docs/img/wave-resulst.png)
 
-#### Notable Bugs
+## User Story Testing
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+|     |            | **_Viewing and Navigation_**                                      |                                                                                       |
+| 1   | Customer   | View list of products                                             | Find something to purchase                                                            |
+| 2   | Customer   | View details of product                                           | See Price, Description, Image, and Sizes i/a                                          |                                                |
+| 3   | Customer   | See my bag's total at any time                                   | Avoid spending too much                                                               |
+|     |            | **_Registration and User Accounts_**                              |                                                                                       |
+| 4   | Reg User   | Register for an account                                           | Save my delivery details and order history                                            |
+| 5   | Reg User   | Quickly login/out                                                 | Access my account                                                                     |
+| 6   | Reg User   | Request a password reset                                          | receive and email to reset my password in case I forget it                            |
+| 7   | Reg User   | Receive an email confirming my registration                       | Verify my account was registered successfully                                         |
+| 8   | Reg User   | Access my user profile                                            | View my order history, manage my personal details                                     |
+|     |            | **_Sorting and Searching_**                                       |                                                                                       |
+| 9   | Customer   | Sort the list of available products                               | See the products in a list sorted by price, rating, quantity available etc            |
+| 10  | Customer   | Sort a category of products                                       | See the products in a category sorted by name, price, rating, etc                     |
+| 11  | Customer   | Sort multiple categories simultaneously                           | Find the best rated or best priced across broad categories such as 'books' or 'honey' |
+| 12  | Customer   | Search for product                                                | Find a specific item I wish to purchase                                               |
+| 13  | Customer   | View a list of search results                                     | See if the product I want is available to purchase                                    |
+|     |            | **_Purchasing and Checkout_**                                     |                                                                                       |
+| 14  | Customer   | Easily select the size and quantity whilst purchasing an item     | Ensure I don't accidentally select the wrong product, quantity, or size               |
+| 15  | Customer   | View items in my basket                                           | See what items are in my basket at a glance to ensure the items are correct           |
+| 16  | Customer   | Adjust the quantity of individual items in my bag                 | Easily adjust the amount of an item I intended to purchase (including removing)       |
+| 17  | Customer   | Easily enter my payment information                               | Checkout quickly, without hassle                                                      |
+| 18  | Customer   | Feel my payment and personal information is secure                | Provide the needed payment and personal information, and feel it is handled safely    |
+| 19  | Customer   | View confirmation of order before completing purchase             | Verify I haven't made any mistakes                                                    |
+| 20  | Customer   | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 |
+|     |            | **_Admin and Store Management_**                                  |                                                                                       |
+| 21  | Staff      | Add a product                                                     | Add new products to my store                                                          |
+| 22  | Staff      | Edit/update a product                                             | Change the price, description, images etc of a product                                |
+| 23  | Staff      | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
+| 24  | Staff      | Add a team member                                                 | Add new products to my store                                                          |
+| 25  | Staff      | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
+| 26  | Staff      | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
+|     |            | **_News Section_**                                                |                                                                                       |
+| 27  | Customer   | View list of news articles                                        | Choose a news article to read                                                         |
+| 28  | Customer   | View full news article                                            | Read detailed about latest news and activities
+|     |            | **_About Section_**                                               |                                                                                       |
+| 29  | Customer   | View list of team members                                         | Learn about the team                                                         |
+
+
+## Notable Bugs
 
 * The summernote widget was displaying a 'Refused to connect', I added X_FRAME_OPTIONS = 'SAMEORIGIN' into settings.py which fixed this issue.
 

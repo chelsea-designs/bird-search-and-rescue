@@ -127,10 +127,15 @@ The final model created records information about team members for the charity t
 
 ### Colours
 
-Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected a colour scheme based on a desire for a simple and clean aesthetic. The site incorporates two main colours, black and white. A black and white color scheme is a popular choice in web design. It can make typography, images, and other visual elements stand out. I felt this colour scheme allowed the hero image to stand out.
+Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected a colour scheme based on a desire for a simple and clean aesthetic. The site incorporates two main colours, black and white and their shades. A black and white color scheme is a popular choice in web design. It can make typography, images, and other visual elements stand out. I felt this colour scheme allowed the hero image to stand out.
 
 ### Typography 
 The project uses Google Fonts for the delivery of the main font styling. The main font used was Poppins which is clear and crisp which allowed users the ability to read the text easily and clearly.
+
+### Logo
+I created a new logo for the charity as their old one needed modernising. The new one incorporates an optical illusion for a dog and a bird.
+![Old Logo](static/docs/img/logo/old-logo.jpg)
+![New Logo](static/docs/img/logo/new-logo.jpg)
 
 ### Icons
 All icons were provided by the Font Awesome library.
