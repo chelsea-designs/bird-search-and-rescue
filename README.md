@@ -76,12 +76,12 @@ Please note: To open any links in this document in a new browser tab, please pre
 | 19  | Customer   | View confirmation of order before completing purchase             | Verify I haven't made any mistakes                                                    |
 | 20  | Customer   | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 |
 |     |            | **_Admin and Store Management_**                                  |                                                                                       |
-| 21  | Site Owner | Add a product                                                     | Add new products to my store                                                          |
-| 22  | Site Owner | Edit/update a product                                             | Change the price, description, images etc of a product                                |
-| 23  | Site Owner | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
-| 24  | Site Owner | Add a team member                                                 | Add new products to my store                                                          |
-| 25  | Site Owner | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
-| 26  | Site Owner | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
+| 21  | Staff      | Add a product                                                     | Add new products to my store                                                          |
+| 22  | Staff      | Edit/update a product                                             | Change the price, description, images etc of a product                                |
+| 23  | Staff      | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
+| 24  | Staff      | Add a team member                                                 | Add new products to my store                                                          |
+| 25  | Staff      | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
+| 26  | Staff      | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
 |     |            | **_News Section_**                                                |                                                                                       |
 | 27  | Customer   | View list of news articles                                        | Choose a news article to read                                                         |
 | 28  | Customer   | View full news article                                            | Read detailed about latest news and activities
@@ -113,24 +113,21 @@ User Account Page: The user account page is a central location from which users 
 
 ### Database Schema
 ![Schema](static/docs/img/data-schema.svg)
-Several custom models were predicted to be required when building the site. To plan out the models they were sketched out in Figma. Figma was chosen due to the limitations of the free tiers for the online apps available which restrict the field choices available, therefore allowing the fields to be defined correctly whilst planning. The intention to utilise AllAuth for the user authentication system, which utilises the built in Django User Model removed the need to build a custom User model for user authentication, however some custom information is required, therefore a custom user model to override the allauth model is required. In order for users to be able to save multiple addresses to their account, an address model was created with the required fields. A boolean field that records whether it is the default address for the user was also added to aid the checkout process.
+Several custom models were predicted to be required when building the site. The intention to utilise AllAuth for the user authentication system, which utilises the built in Django User Model removed the need to build a custom User model for user authentication, however some custom information is required, therefore a custom user model to override the allauth model is required.
 
-For the products a custom model based on the boutique ado walkthrough project was created. This model was adapted by adding the additional fields required for the additional product information expected for this site, whilst several fields were removed as unnecessary given the type of products offered. A seperate image model was created so that additional images for each product could be stored. This allows in theory an unlimited number of images to be stored for each product. Whilst the intention is that each product will have three images in total, one main image associated with the product itself, and two additional images stored in the image model, it would be possible to adjust the site to accomodate many more images per product. By seperating the additional images from the main product model it enables products to be added to the site with only one image. A third product related model to define the product category was created. Based on the model from boutique ado also, the category model contains two fields a name and a friendly name field. No other fields were deemed necessary for the model to customise it further.
+For the products a custom model based on the boutique ado walkthrough project was created. This model was adapted by adding the additional fields required for the additional product information expected for this site, whilst several fields were removed as unnecessary given the type of products offered. A second product related model to define the product category was created. Based on the model from boutique ado also, the category model contains two fields a name and a friendly name field. No other fields were deemed necessary for the model to customise it further.
 
-The order process is controlled with the use of two models, an Order model and a OrderLineItem model. Both models were based on the models from boutique ado with the changes required for the purposes of this site. Given the information that is required to be sent to Stripe for processing the payments and would be required for business purposes the structure of the models makes sense to be utilised. The changes made include the addition of a status field to enable the recording of the order status and future updates to provide users with additional information.
+The order process is controlled with the use of two models, an Order model and a OrderLineItem model. Both models were based on the models from boutique ado with no changes required for the purposes of this site. Given the information that is required to be sent to Stripe for processing the payments and would be required for business purposes the structure of the models makes sense to be utilised. 
 
-Two models relating to users creating reviews of products were created, one to record the users review and another to record an employees response to that review.
+One model was created relating to staff adding news posts to the website.
 
-The final model created records user messages to the company through the contact us page.
+The final model created records information about team members for the charity to display in the about page.
 
 ### Visual Design
 
 ### Colours
 
-Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected a colour scheme based on a desire for a simple and clean aesthetic. The site incorporates two main colours, blue and white, although specific shades were selected for various different areas, they all remained within the blue family. Blue was chosen due to the fictional business base location and the county colours are blue and white. The white or off white shades are tinted with a little blue to maintain consistency. The colour scheme was referenced using the [contrast grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%2303045E%2C%20Primary%0D%0A%23f2f4f8%2C%20Primary-text%0D%0A%23c7ccdb%2C%20Secondary%0D%0A%23f7c59f%2C%20Accent%0D%0A%2370ae6e%2C%20Success%0D%0A%23ef626c%2C%20Error%0D%0A%231188a0%2C%20Info%0D%0A%23f3c178%2C%20Warning&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18) which provides a grid of colour contrasts to ensure only those which would easily pass the AAA standard were selected to maximise accessibility for users.
-
-
-![Colour Contrast Grid](/static/docs/img/contrast-grid.png)
+Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected a colour scheme based on a desire for a simple and clean aesthetic. The site incorporates two main colours, black and white. A black and white color scheme is a popular choice in web design. It can make typography, images, and other visual elements stand out. I felt this colour scheme allowed the hero image to stand out.
 
 ### Typography 
 The project uses Google Fonts for the delivery of the main font styling. The main font used was Poppins which is clear and crisp which allowed users the ability to read the text easily and clearly.
@@ -144,34 +141,27 @@ Background images were acquired from free image site [Unsplash](https://unsplash
 ## Features
 
 ### Navigation
-The main navigation is split into two sections. The first section contains the main navigation for the sites main sections of interest. The second section contains the links for user account management or employee site management. JavaScript was utilised to move the second navigation section into place depending on the size of the screen. On the desktop view the secondary navigation bar appears on the top right of the screen, whilst in the mobile/tablet menu it appears below the main navigation options.
+The main navigation is split into two sections. The first section contains the main navigation for the sites main sections of interest. The second section contains the links forsearch, user account management and the shopping bag. On the desktop view the secondary navigation bar appears on the top right of the screen with primary centered underneath, whilst in the mobile/tablet menu the primary menu appears in a mobile dropdown toggle menu.
 
+![Navigation desktop view](/static/docs/img/features/desktop-nav.png)
 
-![Navigation desktop view](/static/docs/img/features/nav-desktop.png)
+![Navigation mobile menu](/static/docs/img/features/mobile-nav-1.png)
 
-
-
-![Navigation mobile menu](/static/docs/img/features/mobile-menu.png)
-
+![Navigation mobile menu](/static/docs/img/features/mobile-nav-2.png)
 
 
 ### Footer
-There are also navigation links within the footer from which users can access areas of the site, this includes areas that are not listed in the main navigation such as the privacy policy or social media links. Also included in the footer is a newsletter sign up to a mailchimp controlled email database. The mailchimp supplied sign up form was styled to match the remainder of the site.
+Included in the footer is a copyright statement and a hyperlink for email address. This was done to allow an email/contact to be easily navigated to at any time.
 
+![Footer Desktop View](/static/docs/img/features/desktop-footer.png)
 
-
-![Footer Desktop View](/static/docs/img/features/footer-desktop.png)
-
+![Footer Mobile View](/static/docs/img/features/mobile-footer.png)
 
 
 ### Homepage
 The home page greets users with a welcome message overlaid on an image of a dog in nature. This provides a welcome to all users whilst indiciating the sites purpose. The clear links within the navigation bar indicate that the site is a shop whilst the call to action button below the welcome/hero section direct users to donate, which emphasises the shop is for charitable purposes.
 
-
-
 ![Homepage View](/static/docs/img/features/home-desktop.png)
-
-
 
 ![Home page mobile view](/static/docs/img/features/home-mobile.png)
 
