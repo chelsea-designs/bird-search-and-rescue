@@ -5,67 +5,25 @@
      * which prevents any errors 
      */
 
-    function handleEnableDisable(itemId, size) {
 
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val()) || parseInt($(`.id_qty_${itemId}`).val());
+    function handleEnableDisable(itemId, size) {
+        if (size) {
+            var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
+        } else {
+            var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        }
 
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
 
-        // tutor code 
-        // $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        // $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-
-        if (window.location.href.endsWith('bag/')) {
-            currentValue = document.querySelectorAll(`.id_qty_${itemId}`);
-            console.log(currentValue)
-
-            const i = document.querySelectorAll(`.increment-qty_${itemId}`);
-            const d = document.querySelectorAll(`.decrement-qty_${itemId}`);
-
-            i.forEach(item => {
-                item.disabled = plusDisabled;
-            })
-
-            d.forEach(item => {
-                item.disabled = minusDisabled;
-            })
-
-            // $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
-            // $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        if (size) {
+            $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
+            $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabled);
+        } else {
+            $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+            $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled)
         }
-
-        // end tutor code
     }
-
-    // function handleEnableDisable(itemId, size) {
-    //     if (size) {
-    //         var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
-    //     } else {
-    //         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-    //     }
-
-    //     var minusDisabled = currentValue < 2;
-    //     var plusDisabled = currentValue > 98;
-
-    //     if (size) {
-    //         $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
-    //         $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabled);
-    //     } else {
-    //         $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    //         $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
-    //     }
-
-    //     // tutor code 
-    //     if (size) {
-    //         $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
-    //         $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabled);
-    //     } else {
-    //         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    //         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled)
-    //     }
-    //     // end tutor code
-    // }
 
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
