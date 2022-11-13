@@ -166,165 +166,98 @@ The home page greets users with a welcome message overlaid on an image of a dog 
 ![Home page mobile view](/static/docs/img/features/home-mobile.png)
 
 
-
 ### All Products
-The all products page displays summary cards for each product, with a maximum of five products per page pagination was utilised to create multiple pages making up the full list of products.
-
-
+The all products page displays summary cards for each product, with a maximum of four products per row on desktop, two on tablet and one on mobile. The all products page includes a sort by filter and a back to top button.
 
 ![All Products Page](/static/docs/img/features/all-products-desktop.png)
 
+![All Products Page](/static/docs/img/features/all-products-tablet.png)
+
+![All Products Page](/static/docs/img/features/all-products-mobile.png)
 
 
 ### Product Search
-Users can search the site for different products through the search bar which is activated by clicking on the search icon located within the main header.
-
-
+Users can search the site for different products through the search bar which is activated by typing in the search bar on desktop or clicking on the search icon located within the main header on mobile.
 
 ![Search Bar Activated](/static/docs/img/features/search-bar-desktop.png)
 
-
+![Search Bar Activated](/static/docs/img/features/search-bar-mobile.png)
 
 When a search is completed by the user, the results will display in summary card format. Pagination is utilised for scenarios where the search results are too large for display on one page. The search criteria is displayed at the top left of the screen for users as a indication that they have filtered the results.
 
+![Search Results](/static/docs/img/features/search-results.png)
 
+The individual summary card for each product links the user to the full product details. The summary cards contain the basic information users may require for each product, the product name, the sale price, if it is available, a category indicator and the shopping controls.
 
-![Search Results](/static/docs/img/features/search-results-desktop.png)
+### Product Details page
+The product details page includes the product image, title, description, quantity input, rating, size options (where relevant) and add to bag buttons.
 
+![Product Details](/static/docs/img/features/product-details-desktop.png)
 
-
-The individual summary card for each product links the user to the full product details. For ease of use, users have the ability to add the product to their shopping bag without accessing the full product details. A quantity selector is also included for those users who wish to purchase in multiples. The summary cards contain the basic information users may require for each product, the product name, the sale price, if it is available, a category indicator and the shopping controls.
-
-
-
-![Product Card](/static/docs/img/features/product-card.png)
-
+![Product Details](/static/docs/img/features/product-details-mobile.png)
 
 
 ### Add to Bag
-When a user adds a product to their shopping bag they receive a confirmation message that it has successfully been added. The icon for the shopping bag, also gains an indicator that shows the quantity of products they have within the bag as an additional level of confirmation.
+When a user adds a product to their shopping bag they receive a confirmation message that it has successfully been added. The grand total beneath the shopping bag item is incremented to reflect the new total.
 
+![Add to bag confirmation](/static/docs/img/features/add-to-bag.png)
 
-
-![Add to bag confirmation](/static/docs/img/features/add-product-message-desktop.png)
-
+![Add to bag confirmation](/static/docs/img/features/bag-icon.png)
 
 
 ### Shopping bag
 When the user is happy with their selections they can proceed to the shopping bag to confirm the quantity and selections. The user has the ability within this page to adjust the quantity of the products selected, or to remove products entirely before proceeding to the checkout process.
 
-
-
 ![Shopping bag Page](/static/docs/img/features/shopping-bag-desktop.png)
 
 
-
 ### Checkout
-When the user is ready to purchase the products that they have selected, they proceed to the checkout page, here they can enter their billing and delivery information. Registered users can save the information they have entered and create a new address record. If they already have address records saved, they have the option to select one of them to use for this purchase. If they have a default address set the form will be prefilled with the default address information. The final part of the form is the payment details, this is taken directly from Stripe - or inserted by Stripe for the purposes of capturing the payment card information. As the Stripe payment system is not fully activated only the test card information can currently be utilised.
+When the user is ready to purchase the products that they have selected, they proceed to the checkout page, here they can enter their billing and delivery information. Registered users can save the information they have entered. If logged in and they already have address records saved, this will be pre-populated for them to use for this purchase. The final part of the form is the payment details, this is taken directly from Stripe - or inserted by Stripe for the purposes of capturing the payment card information. As the Stripe payment system is not fully activated only the test card information can currently be utilised.
 
 The page also includes summary information about the items being purchased so that it is clear to users what they are purchasing. A message also appears next to the complete order button informing the user of the total amount they are agreeing to be charged.
 
-
-
 ![Checkout page Desktop](/static/docs/img/features/checkout-desktop.png)
-
 
 
 ### Order Confirmation
 When users have successfully processed their payment, they are taken to the order confirmation page which provides the user with a summary of the information their order contains. This page also provides the user with their order number.
 
-
-
-![Order Confirmation](/static/docs/img/features/order-confirmation-desktop.png)
-
-
+![Order Confirmation](/static/docs/img/features/order-confirmation.png)
 
 At the same time as the user is redirected to the order confirmation page, an email is sent to the email address they provided during the checkout process. This email provides the user with the same details as the order confirmation page, with the full address details summarised as the town and country only.
 
 
+### User Profile
+Registered users can access a log of all previous orders through the My Profile page. Here they are able to filter and search through their prior orders. Results are presented in the form of summary cards showing the order number, the items ordered, total order value and date of order.
 
-![Order Confirmation Email](/static/docs/img/features/order-confirmation-email.png)
+![My Profile](/static/docs/img/features/my-profile.png)
 
-
-
-### Order Status
-Registered users can access the status of all previous orders through the order status page. Here they are able to filter and search through their prior orders. Results are presented in the form of summary cards showing the order number, the items ordered, total order value, date of order and its current status.
-
-
-
-![My Order History](/static/docs/img/features/order-history.png)
-
-
-
-Employees are able to access an update order status page which allows them to update the status of an order. Several predefined options are available covering all common order status stages. When an employee updates an orders status it is then reflected back on the users record with the new status. To access the update order status screen employees have an order management option within their employee actions navigation menu. This page is similar to the My Order History page above, and provides the employee the ability to filter and search through the current orders on the system to find the correct order to update.
-
-
-
-![Update Order Status](/static/docs/img/features/update-order-status.png)
-
-
-
-### User Account Management
-Registered users can access controls for their account through the My profile option in the account menu. In the profile page they have access to options to change their email address, name, password or delete their account entirely. They can also make adjustments to the addresses that are stored with their account, accessing add, edit, delete and make default functionality.
-
-
-
-![User Profile Page](/static/docs/img/features/profile.png)
-
-
+Registered users can also access controls to make adjustments to the address that is stored with their account.
 
 
 ### News
 Users have access to view News post articles written by the company. These articles will form part of the company SEO and web marketing strategies and allows them to include information on topics that will be interesting to their users. Clever use of the News post section of the site will allow the company to incorporate both short tail keywords and long tail keywords, providing answers to target users questions. This will improve their overall search engine ranking performance whilst providing users with beneficial information and improving their overall experience and trust within the company.
 Users are able to select which News post to read through the summary list provided on the main News page.
 
+![News Post Page](/static/docs/img/features/news-posts-desktop.png)
+
+The News detail page provides the user with the full news post content
+
+![News post detail page](/static/docs/img/features/news-detail-desktop.png)
+
+Whilst employees will have access to additional options in order to access areas of the site that allow them to add, edit, delete News posts. 
+
+![Employee view of News posts](/static/docs/img/features/employee-news-posts.png)
 
 
-![News Post Page](/static/docs/img/features/News-posts-desktop.png)
+### About
+The about page features a brief description of the charity and also gives details of the team members.
 
+![EAbout Page](/static/docs/img/features/about-page.png)
 
+Whilst employees will have access to additional options in order to access areas of the site that allow them to add, edit, delete team members.
 
-The News detail page provides the user with the full News post content
-
-
-
-![News post detail page](/static/docs/img/features/News-detail-desktop.png)
-
-
-
-Whilst employees will have access to additional options in order to access areas of the site that allow them to add, edit, delete News posts. They also have access to News post category management options that allow them to add, edit and delete categories for News posts.
-
-
-
-![Employee view of News posts](/static/docs/img/features/News-category-management.png)
-
-
-
-### Product Reviews
-Users who have purchased a product from the site are provided access to add a review for that product and a rating. The option exists on the main product detail page for each product. Users are only able to add one review per product, and the employees have the ability to respond to the review directly.
-Other users will be able to read other users reviews of a product to aid in their purchase decision making.
-
-
-
-![Add a product review](/static/docs/img/features/add-review.png)
-
-
-
-Once a user has added a review to a product, they will have the option to edit or delete their review. Employee's get the option to respond to the post or to delete the review. The screenshot below shows all options as the review was added by the logged in employee.
-
-
-
-![View a product review](/static/docs/img/features/product-review.png)
-
-
-
-### Contact Us
-Users have the ability to send a message to the company directly through a contact form provided on the site. When a user sends a message through the website they will also receive a copy of the message to the email address that they provided. The message that the user sends is also delivered via email to the company designated account so that it can be followed up on and answered.
-
-
-
-![Contact Page](/static/docs/img/features/contact-page-desktop.png)
-
+![Employee view of Team](/static/docs/img/features/employee-team.png)
 
 
 ## Future Enhancements
@@ -348,47 +281,6 @@ I utilised a manual testing strategy for the development of the site. A full det
 ## Technologies Used
 
 * Python
-    * The following python modules were used on this project:
-        * asgiref==3.5.2
-        * bleach==5.0.0
-        * boto3==1.24.18
-        * botocore==1.27.18
-        * certifi==2022.5.18.1
-        * cffi==1.15.0
-        * charset-normalizer==2.0.12
-        * crispy-bootstrap5==0.6
-        * cryptography==37.0.2
-        * defusedxml==0.7.1
-        * dj-database-url==0.5.0
-        * Django==3.2
-        * django-allauth==0.50.0
-        * django-countries==7.3.2
-        * django-crispy-forms==1.14.0
-        * django-filter==22.1
-        * django-htmx==1.12.0
-        * django-storages==1.12.3
-        * django-summernote==0.8.20.0
-        * gunicorn==20.1.0
-        * idna==3.3
-        * jmespath==1.0.1
-        * oauthlib==3.2.0
-        * Pillow==9.1.1
-        * psycopg2==2.9.3
-        * pycparser==2.21
-        * PyJWT==2.4.0
-        * python-dateutil==2.8.2
-        * python3-openid==3.2.0
-        * pytz==2022.1
-        * requests==2.27.1
-        * requests-oauthlib==1.3.1
-        * s3transfer==0.6.0
-        * six==1.16.0
-        * sqlparse==0.4.2
-        * stripe==3.2.0
-        * typing_extensions==4.2.0
-        * urllib3==1.26.9
-        * webencodings==0.5.1
-
 * Django
     * Django was used as the main python framework in the development of this project
     * Django AllAuth was utilised to provide enhanced user account management functionality.
@@ -396,11 +288,8 @@ I utilised a manual testing strategy for the development of the site. A full det
     * Was used as the cloud based platform to deploy the site on
 * Heroku PostgreSQL
     * Heroku PostgreSQL was used as the database for this project during development and in production.
-* HTMX
-    * HTMX is a JavaScript library that enables forms to be submitted and data to be retrieved from the backend without refreshing the entire page. It was used extensively for pages that included form submission such as the creation of the recipes where creating ingredients in another model, and creating steps in a third model was required. This package provided a simpler approach to using multiple formsets and custom JavaScript.
 * JavaScript
-    * Custom JavaScript was utilised to enable the colour scheme functionality, the mobile menu, the enabling and disabling of buttons on forms to prevent users inadvertantly causing errors when trying to submit multiple forms at the same time, and to display the current image in the form rather than a hyperlink to the image itself.
-* Bootstrap 5.2
+* Bootstrap
     * Bootstrap was used for general layout and spacing requirements for the site.
 * Font Awesome
     * Was used for access to several icons for different sections where icons were appropriate.
@@ -410,34 +299,30 @@ I utilised a manual testing strategy for the development of the site. A full det
     * Jinja/Django templating language was utilised to insert data from the database into the sites pages. It was also utilised to perform queries on different datasets.
 * HTML
     * HTML was used as the base language for the templates created for the site.
-
-#### Packages Used
-
 * Gitpod was used to develop the site
 * Git was utilised for version control and transferring files between the code editor and the repository
 * GitHub was utilised for storing the files for this project
 * Figma was utilised to develop wireframes for the site from which the design was based
 * Affinity Photo was used to adapt images for use within the site.
-* GraphViz was used to develop the database schema during development - I used this instead of a DB app due to the ease with which to document the actual field types rather than some of the online apps which don't include fields that are available.
+* GraphViz was used to develop the database schema during development.
 
 #### Resources Used
 
 * The Django documentation was used extensively during development of this project
-* The HTMX documentation was used as a reference source for the development of the HTMX features
 * The Django AllAuth documentation was used as a reference and a guide for implementing the package and its features.
 * The Code Institute reference material was used as a general reference for things that I had previously done during the course.
 * All other resources used are referenced where appropriate.
 
 ## Deployment
-A repository was setup in GitHub using the Code Institute Gitpod [full template](https://github.com/Code-Institute-Org/gitpod-full-template).  Development was completed using Gitpod and code was regularly pushed back to the GitHub repository.  The master branch of this repository is the most current version and has been used for the deployed version of the site.
+A repository was setup in GitHub using the Code Institute Gitpod full template.  Development was completed using Gitpod and code was regularly pushed back to the GitHub repository.  The master branch of this repository is the most current version and has been used for the deployed version of the site.
 
-The current live website is hosted as a [Heroku](https://www.heroku.com) app, however the images and static files are hosted on an [AWS](https://aws.amazon.com) simple storage service (s3).  [Stripe](https://stripe.com) is utilised for the management of financial transactions and [Gmail](https://google.com) is used for emails.  The instructions in this section cover the process to set up and use these services. 
+The current live website is hosted as a Heroku app, however the images and static files are hosted on an AWS simple storage service (s3).  Stripe is utilised for the management of financial transactions and Gmail is used for emails.  The instructions in this section cover the process to set up and use these services. 
 
 # Running the project locally
 To work on the project code locally a clone can be taken by following the steps below or downloading the files as a zip file. To see the options, open the desired repository and select the drop down menu button ‘Code’ (found under the repo name and above the list of files).
 
 ## Clone:
-To do this you will need Git for Windows installed (for other OS versions see [here]( https://git-scm.com/downloads)).
+To do this you will need Git for Windows installed.
 
 *   Open Git.
 *   Change the current working directory is required. On windows, by default, the files will be downloaded to the users file directory on the C: drive.
@@ -531,7 +416,7 @@ The following environment variables (in CAPS) must be set within the ‘Config V
   * *Value: 16 character password provided by, in this instance; Gmail (see below section [Email Setup](#Email-Setup)).*
 * EMAIL_HOST_USER
   * Required by Django to send emails using chosen email account
-  * *Value: the email address of chosen email account (e.g. `bob.smith@gmail.com`)*
+  * *Value: the email address of chosen email account (e.g. `john.smith@gmail.com`)*
 
 ## Deployment
 In order to run properly, Heroku requires:
@@ -548,8 +433,7 @@ To deploy the app to Heroku from the GitHub repository you will need to follow t
 * Within the new app select the ‘resources’ tab and under addons type in ‘postgres’ to provision a new Heroku Postgres database (this will also add the required DATABASE_URL variable and value in the Heroku Config variables)
 
 ### Setup to auto-deploy when pushed to GitHub:
-* Within the Heroku web dashboard, Click on the Deploy tab:  
-![Heroku option deploy](assets/readme/heroku_options_deploy.png)
+* Within the Heroku web dashboard, Click on the Deploy tab.
 * Select deployment method as ‘GitHub’, and then search for your repository below that.
 * Once your repository name is returned, click 'connect'.
 * Then click ‘enable automatic deploys’
@@ -576,15 +460,12 @@ Once all the configuration variables have been added, the deployed app can then 
 ## Create s3 bucket
 * Go to [Amazon Web Services](https://aws.amazon.com/) and set up an account if you do not have one.
 * Once logged in, under ‘my account’ select ‘AWS Management Console’ and search for the service ‘s3’
-* Once in the s3 interface create a new bucket for this project:  
-![AWS create bucket button](assets/readme/aws_create_bucket_btn.png)
+* Once in the s3 interface create a new bucket for this project.
 * Name the bucket and select a region closest to you.
-* Uncheck block all public access and acknowledge that the bucket will be public:  
-![AWS bucket - block public access settings](assets/readme/aws_create_bucket_public_access.png)
+* Uncheck block all public access and acknowledge that the bucket will be public.
 * Select ‘create bucket’ to finish and the bucket will be created.
 * Under the bucket properties tab, select to ‘edit’ Static website hosting and select ‘enable’.
-* Ensure that ‘host a static website’ is selected and enter a default value for index as this will not be used for this project deployment:  
-![AWS bucket - static web hosting](assets/readme/aws_create_bucket_sw_hosting.png)
+* Ensure that ‘host a static website’ is selected and enter a default value for index as this will not be used for this project deployment.
 * Click save.
 * Next click permissions tab and select to edit the CORS 
 * Enter and save the below cors configuration which will set up the required access between the Heroku app and this s3 bucket.
@@ -604,19 +485,15 @@ Once all the configuration variables have been added, the deployed app can then 
   }
 ]
 ```
-* Next select to edit the bucket policy and select ‘policy generator’ to generate a policy.  Before you do that, copy the ‘Bucket ARN’ as shown below (you will also need this for setting up a group within Identity and Access Management below).  
-![AWS bucket - edit policy](assets/readme/aws_create_bucket_edit_policy.png)
+* Next select to edit the bucket policy and select ‘policy generator’ to generate a policy.  Before you do that, copy the ‘Bucket ARN’ (you will also need this for setting up a group within Identity and Access Management below).
 * Within the policy generator select policy type of ‘S3 Bucket Policy’
 * Within Add Statements, select ‘allow’ for effect and type a star within ‘Principal’:  
-![AWS bucket - add statements](assets/readme/aws_create_bucket_add_statements.png)
 * For Actions select only ‘GetObject’:  
-![AWS bucket - action select](assets/readme/aws_create_bucket_getobject.png)
 * Then below that paste in the ‘bucket ARN into the Amazon Resource Name input box.
 * Click ‘Add Statement’, then ‘Generate Policy’
 * Copy the policy into the bucket policy editor and then so as to allow access to all resources in this bucket, add a slash star onto the end of the resource key:
 * Click Save.
 * Next select to edit the Access control list and set the list objects permission for everyone under the Public Access section as below:  
-![AWS bucket - acl](assets/readme/aws_create_bucket_acl.png)
  
 ## Create access policy, group and user
 ### Create Group and Policy
@@ -624,10 +501,8 @@ Once all the configuration variables have been added, the deployed app can then 
 * Name a new group and click ‘create group’.
 * Click ‘policies’ so as to create a policy used to access the new bucket.
 * Click ‘create policy’ and then select the ‘JSON’ tab and select ‘import managed policy’.
-* Within the search input, search for s3 and then select to import the Amazon s3 full access policy:  
-![AWS bucket - group policy](assets/readme/aws_group_policy.png)
-* Modify the policy by entering the ARN from the bucket policy in s3 as the value for resource as below:  
-![AWS bucket - policy modification](assets/readme/aws_modify_policy.png)
+* Within the search input, search for s3 and then select to import the Amazon s3 full access policy.  
+* Modify the policy by entering the ARN from the bucket policy in s3 as the value for resource.
 * Click ‘Next: Tags’ and then click ‘Next: Review’
 * Provide a name and description for the policy and click ‘Create policy’.
 
@@ -644,8 +519,7 @@ Once all the configuration variables have been added, the deployed app can then 
 * **!IMPORTANT:** On the success page, click 'Download .csv file' which contains the user access key and secret access key needed to authenticate them from the Django app.
 
 ## Connect Django to AWS s3 bucket.
-Within the Django app settings python file enter the name and region name for the AWS s3 bucket that you have set up as indicated below:  
-![AWS bucket - aws Django settings](assets/readme/django_settings_aws.png)
+Within the Django app settings python file enter the name and region name for the AWS s3 bucket that you have set up.
 
 Within Heroku add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to the config variables and also add a USE_AWS key and set it to true.  The access key and secret key are contained with the **downloaded csv file**.
 
@@ -657,8 +531,7 @@ The below instructions detail how to do this within the s3 management interface.
 * Within the s3 bucket overview click create folder and call it media.
 * Inside that folder click on ‘upload’ and then ‘add files’
 * Select all of the product images (found within the repo download performed earlier) and click open
-* Click next and then under permissions, check the box for ‘grant public-read access’:  
-![AWS bucket - add media](assets/readme/aws_bucket_add_media.png)
+* Click next and then under permissions, check the box for ‘grant public-read access’.
 * Then click upload.
 * There should now be a 'media' folder within the s3 bucket containing the images. 
 
@@ -670,8 +543,7 @@ The below instructions detail how to do this within the s3 management interface.
 **NOTE:** Two separate webhooks will need to be setup. One for the development environment and one for the Heroku app.
 * Run the application to get the address of the site.  Copy this and go to the Stripe dashboard.
 * Click ‘Developers’, select ‘webhooks’ and then click ‘Add endpoint’.
-* Paste in the site URL and add to the end ‘/checkout/wh/’:  
-![Stripe webhook url entry](assets/readme/stripe_wh_url.png)
+* Paste in the site URL and add to the end ‘/checkout/wh/’.
 * Click ‘Select Events’ and select the events to listen to as:
 ```
   ‘payment_intent_suceeded’ 
