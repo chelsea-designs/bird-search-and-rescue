@@ -52,44 +52,75 @@ I verified the sites accessibility using [WAVE](https://wave.webaim.org/report#/
 ![WAVE Results](/static/docs/img/wave-resulst.png)
 
 ## User Story Testing
-| ID  | As A/An    | I want to...                                                      | So I can...                                                                           |
-| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+
+All of the below user stories have been tested manually and passed, all documented with screenshots in this [manual testing pdf](static/docs/manual-testing.pdf)
+
+### Viewing and Navigation
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Viewing and Navigation_**                                      |                                                                                       |
-| 1   | Customer   | View list of products                                             | Find something to purchase                                                            |
-| 2   | Customer   | View details of product                                           | See Price, Description, Image, and Sizes i/a                                          |                                                |
-| 3   | Customer   | See my bag's total at any time                                   | Avoid spending too much                                                               |
+| 1   | Customer   | View list of products                                             | Find something to purchase                                                            | Pass |
+| 2   | Customer   | View details of product                                           | See Price, Description, Image, and Sizes i/a                                          | Pass |                                                |
+| 3   | Customer   | See my bag's total at any time                                   | Avoid spending too much                                                               | Pass |
+
+### Registration and User Accounts
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Registration and User Accounts_**                              |                                                                                       |
-| 4   | Reg User   | Register for an account                                           | Save my delivery details and order history                                            |
-| 5   | Reg User   | Quickly login/out                                                 | Access my account                                                                     |
-| 6   | Reg User   | Request a password reset                                          | receive and email to reset my password in case I forget it                            |
-| 7   | Reg User   | Receive an email confirming my registration                       | Verify my account was registered successfully                                         |
-| 8   | Reg User   | Access my user profile                                            | View my order history, manage my personal details                                     |
+| 4   | Reg User   | Register for an account                                           | Save my delivery details and order history                                            | Pass |
+| 5   | Reg User   | Quickly login/out                                                 | Access my account                                                                     | Pass |
+| 6   | Reg User   | Request a password reset                                          | receive and email to reset my password in case I forget it                            | Pass |
+| 7   | Reg User   | Receive an email to verify my registration                       | Verify my account was registered successfully                                         | Pass |
+| 8   | Reg User   | Access my user profile                                            | View my order history, manage my personal details                                     | Pass |
+
+### Sorting and Searching
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Sorting and Searching_**                                       |                                                                                       |
-| 9   | Customer   | Sort the list of available products                               | See the products in a list sorted by price, rating, quantity available etc            |
-| 10  | Customer   | Sort a category of products                                       | See the products in a category sorted by name, price, rating, etc                     |
-| 11  | Customer   | Sort multiple categories simultaneously                           | Find the best rated or best priced across broad categories such as 'books' or 'honey' |
-| 12  | Customer   | Search for product                                                | Find a specific item I wish to purchase                                               |
-| 13  | Customer   | View a list of search results                                     | See if the product I want is available to purchase                                    |
+| 9   | Customer   | Sort the list of all available products                               | See the products in a list sorted by price, rating, quantity available etc            | Pass |
+| 10  | Customer   | Sort a category of products                                       | See the products in a category sorted by name, price, rating, etc                     | [Pass |
+| 11  | Customer   | Filter products by category                           | See the products in a specified category | Pass |
+| 12  | Customer   | Search for product                                                | Find a specific item I wish to purchase                                               | Pass |
+| 13  | Customer   | View a list of search results                                     | See if the product I want is available to purchase                                    | Pass |
+
+### Purchasing and Checkout
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Purchasing and Checkout_**                                     |                                                                                       |
-| 14  | Customer   | Easily select the size and quantity whilst purchasing an item     | Ensure I don't accidentally select the wrong product, quantity, or size               |
-| 15  | Customer   | View items in my basket                                           | See what items are in my basket at a glance to ensure the items are correct           |
-| 16  | Customer   | Adjust the quantity of individual items in my bag                 | Easily adjust the amount of an item I intended to purchase (including removing)       |
-| 17  | Customer   | Easily enter my payment information                               | Checkout quickly, without hassle                                                      |
-| 18  | Customer   | Feel my payment and personal information is secure                | Provide the needed payment and personal information, and feel it is handled safely    |
-| 19  | Customer   | View confirmation of order before completing purchase             | Verify I haven't made any mistakes                                                    |
-| 20  | Customer   | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 |
+| 14  | Customer   | Easily select the size and quantity whilst purchasing an item     | Ensure I don't accidentally select the wrong product, quantity, or size               | Pass |
+| 15  | Customer   | View items in my basket                                           | See what items are in my basket at a glance to ensure the items are correct           | Pass |
+| 16  | Customer   | Adjust the quantity of individual items in my bag                 | Easily adjust the amount of an item I intended to purchase (including removing)       | Pass |
+| 17  | Customer   | Easily enter my payment information                               | Checkout quickly, without hassle                                                      | Pass |
+| 18  | Customer   | Feel my payment and personal information is secure                | Provide the needed payment and personal information, and feel it is handled safely    | Pass |
+| 19  | Customer   | View order summary before completing purchase             | Verify I haven't made any mistakes                                                    | Pass |
+| 20  | Customer   | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 | Pass |
+
+### Admin and Store Management
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Admin and Store Management_**                                  |                                                                                       |
-| 21  | Staff      | Add a product                                                     | Add new products to my store                                                          |
-| 22  | Staff      | Edit/update a product                                             | Change the price, description, images etc of a product                                |
-| 23  | Staff      | Delete a product                                                  | Remove items that aren't for sale anymore                                             |
-| 24  | Staff      | Add a team member                                                 | Add new products to my store                                                          |
-| 25  | Staff      | Edit/update a team member                                         | Change the price, description, images etc of a product                                |
-| 26  | Staff      | Delete a team member                                              | Remove items that aren't for sale anymore                                             |
+| 21  | Staff      | Add a product                                                     | Add new products to my store                                                          | Pass |
+| 22  | Staff      | Edit/update a product                                             | Change the price, description, images etc of a product                                | Pass |
+| 23  | Staff      | Delete a product                                                  | Remove items that aren't for sale anymore                                             | Pass |
+| 24  | Staff      | Add a team member                                                 | Add new products to my store                                                          | Pass |
+| 25  | Staff      | Edit/update a team member                                         | Change the price, description, images etc of a product                                | Pass |
+| 26  | Staff      | Delete a team member                                              | Remove items that aren't for sale anymore                                             | Pass |
+| 27  | Staff      | Add a news post                                                 | Add new news posts to news section                                                         | Pass |
+| 28  | Staff      | Edit/update a news post                                         | Change the title, description, images etc of a post                                | Pass |
+| 29  | Staff      | Delete a news post                                             | Remove posts that aren't needed anymore                                             | Pass |
+
+### News Section
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_News Section_**                                                |                                                                                       |
-| 27  | Customer   | View list of news articles                                        | Choose a news article to read                                                         |
-| 28  | Customer   | View full news article                                            | Read detailed about latest news and activities
+| 30  | Customer   | View list of news articles                                        | Choose a news article to read                                                         | Pass |
+| 31  | Customer   | View full news article                                            | Read detailed about latest news and activities                                                   | Pass |
+
+### About Section
+| ID  | As A/An    | I want to...                                                      | So I can...                                                                           | Pass |
+| --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_About Section_**                                               |                                                                                       |
-| 29  | Customer   | View list of team members                                         | Learn about the team                                                         |
+| 32  | Customer   | View list of team members                                         | Learn about the team                                                         | Pass |
 
 
 ## Notable Bugs

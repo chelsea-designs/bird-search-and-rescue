@@ -302,6 +302,9 @@ input[name='q']::placeholder {
     max-width: min(100%, 485px);
 }
 
+.news-card-post-container {
+    border: solid 1px grey;
+}
 
 /* Team Members */
 
